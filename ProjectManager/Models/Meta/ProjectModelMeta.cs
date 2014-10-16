@@ -1,0 +1,40 @@
+﻿
+//*****************************************************************
+//
+// File Name:   AccessMeta.cs
+//
+// Description:  Sys_Access:权限表
+//
+// Coder:       CodeSmith Generate
+//
+// Date:        2013-06-27 
+//
+//*****************************************************************
+
+using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace ProjectManager.Models
+{
+    [Serializable]
+    [MetadataType(typeof(ProjectModelMeta))]
+    public partial class ProjectModel
+    {
+        public partial class ProjectModelMeta
+        {
+            [Display(Name = "编号")]
+            public int ID { get; set; }
+
+            [Display(Name = "名称")]
+            [Required]
+            [StringLength(20)]
+            public string Name { get; set; }
+
+            [Display(Name = "描述")]
+            [StringLength(4000)]
+            [Required]
+            public string Description { get; set; }
+        }
+	}
+}
+

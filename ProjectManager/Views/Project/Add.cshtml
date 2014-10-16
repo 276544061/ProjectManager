@@ -1,0 +1,23 @@
+﻿@model ProjectModel
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts
+{
+    <script type="text/javascript">
+        function success(data) {
+            alert(data);
+        }
+    </script>
+}
+@using (Ajax.BeginForm(new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }))
+{
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    @Html.ValidationMessageFor(m=>m.Name)
+    @Html.LabelFor(m => m.Description)
+    @Html.TextAreaFor(m => m.Description)
+    @Html.ValidationMessageFor(m=>m.Description)
+    <input type="submit" value="保存" />
+}
