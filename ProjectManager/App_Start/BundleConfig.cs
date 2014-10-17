@@ -46,6 +46,15 @@ namespace ProjectManager
                  "~/Content/themes/bootstrap/css/chosen.css",
                 "~/Content/themes/bootstrap/css/style-metro.css"
                 ));
+
+            bundles.Add(new ScriptBundle("~/Content/artDialog").Include(
+                "~/Content/artDialog/dist/dialog-min.js",
+                "~/Content/artDialog/dist/dialog-plus-min.js"
+                ));
+            bundles.Add(new ScriptBundle("~/Content/mmGrid").Include(
+                "~/Content/mmGrid/src/mmGrid.js",
+                "~/Content/mmGrid/src/mmPaginator.js"
+                ));
         }
     }
 }

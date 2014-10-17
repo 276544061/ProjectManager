@@ -28,11 +28,13 @@ namespace ProjectManager.Models
             [Display(Name = "名称")]
             [Required]
             [StringLength(20)]
+            [UIHint("Text")]
             public string Name { get; set; }
 
             [Display(Name = "描述")]
             [StringLength(4000)]
             [Required]
+            [UIHint("Text")]
             public string Description { get; set; }
         }
 	}

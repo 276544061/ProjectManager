@@ -2678,6 +2678,8 @@ namespace PetaPoco
 			set; 
 		}
 
+        public T Item { get; set; }
+
 		/// <summary>
 		/// The total number of pages in the full result set
 		/// </summary>

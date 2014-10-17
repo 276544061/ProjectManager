@@ -15,7 +15,27 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/artDialog/css/ui-dialog.css")
+    @Scripts.Render("~/Content/artDialog")
+    @Scripts.Render("~/Content/mmGrid")
     @RenderSection("footer", required: false)
     @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        function SuccessTip(con, onClose, showTime) {
+            if (0 == showTime || !showTime) {
+                showTime = 3;
+            }
+            var d = dialog({
+                content: con
+            });
+            d.show();
+            setTimeout(function () {
+                if (onClose) {
+                    onClose();
+                }
+                d.close().remove();
+            }, showTime*1000);
+        }
+    </script>
 </body>
 </html>

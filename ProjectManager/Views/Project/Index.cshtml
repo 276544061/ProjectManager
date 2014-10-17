@@ -4,11 +4,45 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-@foreach (ProjectModel item in Model.ProjectList.Items)
+@section scripts
 {
-    <tr>
-        <td>@item.ID</td>
-        <td>@item.Name</td>
-    </tr>
+    <script type="text/javascript">
+        function delSuccess(data) {
+
+        }
+
+    </script>
 }
+<div class="page-content">
+    <div class="container-fluid">
+        <!-- 页面内容开始-->
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="portlet-body flip-scroll">
+                        <table class="table-bordered table-striped table-condensed flip-content">
+                            <thead class="flip-content">
+                                <tr>
+                                    <th>@Html.LabelFor(m => m.ProjectList.Item.ID)</th>
+                                    <th>@Html.LabelFor(m => m.ProjectList.Item.Name)</th>
+                                    <th>编辑</th>
+                                    <th>删除</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (ProjectModel item in Model.ProjectList.Items)
+                                {
+                                    <tr>
+                                        <td>@item.ID</td>
+                                        <td>@item.Name</td>
+                                        <td></td>
+                                        <td>@Html.ActionLink("删除", "delete", "project", new { id = item.ID },new{@class=""})</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
