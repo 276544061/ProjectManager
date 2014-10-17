@@ -15,9 +15,891 @@
 {
     @Html.LabelFor(m => m.Name)
     @Html.TextBoxFor(m => m.Name)
-    @Html.ValidationMessageFor(m=>m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
     @Html.LabelFor(m => m.Description)
     @Html.TextAreaFor(m => m.Description)
-    @Html.ValidationMessageFor(m=>m.Description)
+    @Html.ValidationMessageFor(m => m.Description)
     <input type="submit" value="保存" />
 }
+<div class="page-content" style="min-height: 885px !important">
+
+    <!-- BEGIN PAGE CONTAINER-->
+
+    <div class="container-fluid">
+
+        <!-- BEGIN PAGE HEADER-->
+
+       @* <div class="row-fluid">
+
+            <div class="span12">
+
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="icon-home"></i>
+                        <a href="index.html">Home</a>
+                        <span class="icon-angle-right"></span>
+                    </li>
+                    <li>
+                        <a href="#">Form Stuff</a>
+                        <span class="icon-angle-right"></span>
+                    </li>
+                    <li><a href="#">Form Layouts</a></li>
+                </ul>
+
+            </div>
+        </div>*@
+
+        <!-- END PAGE HEADER-->
+
+        <!-- BEGIN PAGE CONTENT-->
+
+        <div class="row-fluid">
+
+            <div class="span12">
+
+                <!-- BEGIN SAMPLE FORM PORTLET-->
+                <div class="portlet box blue">
+                    <div class="portlet-body form">
+                        <!-- BEGIN FORM-->
+                        <form action="#" class="form-horizontal">
+                            <div class="control-group">
+
+                                <label class="control-label">Input</label>
+
+                                <div class="controls">
+
+                                    <input type="text" class="span6 m-wrap">
+
+                                    <span class="help-inline">Some hint here</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Disabled Input</label>
+
+                                <div class="controls">
+
+                                    <input class="span6 m-wrap" type="text" placeholder="Disabled input here..." disabled="">
+
+                                    <span class="help-inline">Some hint here</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Readonly Input</label>
+
+                                <div class="controls">
+
+                                    <input class="span6 m-wrap" type="text" placeholder="Readonly input here..." disabled="">
+
+                                    <span class="help-inline">Some hint here</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Input with Popover</label>
+
+                                <div class="controls">
+
+                                    <input type="text" class="span6 m-wrap popovers" data-trigger="hover" data-content="Popover body goes here. Popover body goes here." data-original-title="Popover header">
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Input with Tooltip</label>
+
+                                <div class="controls">
+
+                                    <input type="text" class="span6 m-wrap tooltips" data-trigger="hover" data-original-title="Tooltip text goes here. Tooltip text goes here.">
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Auto Complete</label>
+
+                                <div class="controls">
+
+                                    <input type="text" class="span6 m-wrap" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
+
+                                    <p class="help-block">Start typing to auto complete!. E.g: California</p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Email Address Input</label>
+
+                                <div class="controls">
+
+                                    <div class="input-prepend">
+                                        <span class="add-on">@("@")</span><input class="m-wrap " type="text" placeholder="Email Address">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Email Address Input</label>
+
+                                <div class="controls">
+
+                                    <div class="input-icon left">
+
+                                        <i class="icon-envelope"></i>
+
+                                        <input class="m-wrap " type="text" placeholder="Email Address">
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Currency Input</label>
+
+                                <div class="controls">
+
+                                    <div class="input-prepend input-append">
+
+                                        <span class="add-on">$</span><input class="m-wrap " type="text"><span class="add-on">.00</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Default Dropdown</label>
+
+                                <div class="controls">
+
+                                    <select class="span6 m-wrap" data-placeholder="Choose a Category" tabindex="1">
+
+                                        <option value="">Select...</option>
+
+                                        <option value="Category 1">Category 1</option>
+
+                                        <option value="Category 2">Category 2</option>
+
+                                        <option value="Category 3">Category 5</option>
+
+                                        <option value="Category 4">Category 4</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Default Dropdown(Multiple)</label>
+
+                                <div class="controls">
+
+                                    <select class="span6 m-wrap" multiple="multiple" data-placeholder="Choose a Category" tabindex="1">
+
+                                        <option value="Category 1">Category 1</option>
+
+                                        <option value="Category 2">Category 2</option>
+
+                                        <option value="Category 3">Category 5</option>
+
+                                        <option value="Category 4">Category 4</option>
+
+                                        <option value="Category 3">Category 6</option>
+
+                                        <option value="Category 4">Category 7</option>
+
+                                        <option value="Category 3">Category 8</option>
+
+                                        <option value="Category 4">Category 9</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Custom Dropdown</label>
+
+                                <div class="controls">
+
+                                    <select class="span6 chosen chzn-done" data-placeholder="Choose a Category" tabindex="-1" id="selX5R" style="display: none;">
+
+                                        <option value=""></option>
+
+                                        <option value="Category 1">Category 1</option>
+
+                                        <option value="Category 2">Category 2</option>
+
+                                        <option value="Category 3">Category 5</option>
+
+                                        <option value="Category 4">Category 4</option>
+
+                                    </select><div id="selX5R_chzn" class="chzn-container chzn-container-single" style="width: 430px;">
+                                        <a href="javascript:void(0)" class="chzn-single chzn-default" tabindex="-1"><span>Choose a Category</span><div><b></b></div>
+                                        </a>
+                                        <div class="chzn-drop" style="left: -9000px; width: 428px; top: 33px;">
+                                            <div class="chzn-search">
+                                                <input type="text" autocomplete="off" tabindex="1" style="width: 393px;">
+                                            </div>
+                                            <ul class="chzn-results">
+                                                <li id="selX5R_chzn_o_1" class="active-result" style="">Category 1</li>
+                                                <li id="selX5R_chzn_o_2" class="active-result" style="">Category 2</li>
+                                                <li id="selX5R_chzn_o_3" class="active-result" style="">Category 5</li>
+                                                <li id="selX5R_chzn_o_4" class="active-result" style="">Category 4</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Grouped Custom Dropdown</label>
+
+                                <div class="controls">
+
+                                    <select data-placeholder="Your Favorite Football Team" class="chosen span6 chzn-done" tabindex="-1" id="selS0V" style="display: none;">
+
+                                        <option value=""></option>
+
+                                        <optgroup label="NFC EAST">
+
+                                            <option>Dallas Cowboys</option>
+
+                                            <option>New York Giants</option>
+
+                                            <option>Philadelphia Eagles</option>
+
+                                            <option>Washington Redskins</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="NFC NORTH">
+
+                                            <option>Chicago Bears</option>
+
+                                            <option>Detroit Lions</option>
+
+                                            <option>Green Bay Packers</option>
+
+                                            <option>Minnesota Vikings</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="NFC SOUTH">
+
+                                            <option>Atlanta Falcons</option>
+
+                                            <option>Carolina Panthers</option>
+
+                                            <option>New Orleans Saints</option>
+
+                                            <option>Tampa Bay Buccaneers</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="NFC WEST">
+
+                                            <option>Arizona Cardinals</option>
+
+                                            <option>St. Louis Rams</option>
+
+                                            <option>San Francisco 49ers</option>
+
+                                            <option>Seattle Seahawks</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="AFC EAST">
+
+                                            <option>Buffalo Bills</option>
+
+                                            <option>Miami Dolphins</option>
+
+                                            <option>New England Patriots</option>
+
+                                            <option>New York Jets</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="AFC NORTH">
+
+                                            <option>Baltimore Ravens</option>
+
+                                            <option>Cincinnati Bengals</option>
+
+                                            <option>Cleveland Browns</option>
+
+                                            <option>Pittsburgh Steelers</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="AFC SOUTH">
+
+                                            <option>Houston Texans</option>
+
+                                            <option>Indianapolis Colts</option>
+
+                                            <option>Jacksonville Jaguars</option>
+
+                                            <option>Tennessee Titans</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="AFC WEST">
+
+                                            <option>Denver Broncos</option>
+
+                                            <option>Kansas City Chiefs</option>
+
+                                            <option>Oakland Raiders</option>
+
+                                            <option>San Diego Chargers</option>
+
+                                        </optgroup>
+
+                                    </select><div id="selS0V_chzn" class="chzn-container chzn-container-single" style="width: 430px;">
+                                        <a href="javascript:void(0)" class="chzn-single chzn-default" tabindex="-1"><span>Your Favorite Football Team</span><div><b></b></div>
+                                        </a>
+                                        <div class="chzn-drop" style="left: -9000px; width: 428px; top: 33px;">
+                                            <div class="chzn-search">
+                                                <input type="text" autocomplete="off" tabindex="-1" style="width: 393px;">
+                                            </div>
+                                            <ul class="chzn-results">
+                                                <li id="selS0V_chzn_g_1" class="group-result">NFC EAST</li>
+                                                <li id="selS0V_chzn_o_2" class="active-result group-option" style="">Dallas Cowboys</li>
+                                                <li id="selS0V_chzn_o_3" class="active-result group-option" style="">New York Giants</li>
+                                                <li id="selS0V_chzn_o_4" class="active-result group-option" style="">Philadelphia Eagles</li>
+                                                <li id="selS0V_chzn_o_5" class="active-result group-option" style="">Washington Redskins</li>
+                                                <li id="selS0V_chzn_g_6" class="group-result">NFC NORTH</li>
+                                                <li id="selS0V_chzn_o_7" class="active-result group-option" style="">Chicago Bears</li>
+                                                <li id="selS0V_chzn_o_8" class="active-result group-option" style="">Detroit Lions</li>
+                                                <li id="selS0V_chzn_o_9" class="active-result group-option" style="">Green Bay Packers</li>
+                                                <li id="selS0V_chzn_o_10" class="active-result group-option" style="">Minnesota Vikings</li>
+                                                <li id="selS0V_chzn_g_11" class="group-result">NFC SOUTH</li>
+                                                <li id="selS0V_chzn_o_12" class="active-result group-option" style="">Atlanta Falcons</li>
+                                                <li id="selS0V_chzn_o_13" class="active-result group-option" style="">Carolina Panthers</li>
+                                                <li id="selS0V_chzn_o_14" class="active-result group-option" style="">New Orleans Saints</li>
+                                                <li id="selS0V_chzn_o_15" class="active-result group-option" style="">Tampa Bay Buccaneers</li>
+                                                <li id="selS0V_chzn_g_16" class="group-result">NFC WEST</li>
+                                                <li id="selS0V_chzn_o_17" class="active-result group-option" style="">Arizona Cardinals</li>
+                                                <li id="selS0V_chzn_o_18" class="active-result group-option" style="">St. Louis Rams</li>
+                                                <li id="selS0V_chzn_o_19" class="active-result group-option" style="">San Francisco 49ers</li>
+                                                <li id="selS0V_chzn_o_20" class="active-result group-option" style="">Seattle Seahawks</li>
+                                                <li id="selS0V_chzn_g_21" class="group-result">AFC EAST</li>
+                                                <li id="selS0V_chzn_o_22" class="active-result group-option" style="">Buffalo Bills</li>
+                                                <li id="selS0V_chzn_o_23" class="active-result group-option" style="">Miami Dolphins</li>
+                                                <li id="selS0V_chzn_o_24" class="active-result group-option" style="">New England Patriots</li>
+                                                <li id="selS0V_chzn_o_25" class="active-result group-option" style="">New York Jets</li>
+                                                <li id="selS0V_chzn_g_26" class="group-result">AFC NORTH</li>
+                                                <li id="selS0V_chzn_o_27" class="active-result group-option" style="">Baltimore Ravens</li>
+                                                <li id="selS0V_chzn_o_28" class="active-result group-option" style="">Cincinnati Bengals</li>
+                                                <li id="selS0V_chzn_o_29" class="active-result group-option" style="">Cleveland Browns</li>
+                                                <li id="selS0V_chzn_o_30" class="active-result group-option" style="">Pittsburgh Steelers</li>
+                                                <li id="selS0V_chzn_g_31" class="group-result">AFC SOUTH</li>
+                                                <li id="selS0V_chzn_o_32" class="active-result group-option" style="">Houston Texans</li>
+                                                <li id="selS0V_chzn_o_33" class="active-result group-option" style="">Indianapolis Colts</li>
+                                                <li id="selS0V_chzn_o_34" class="active-result group-option" style="">Jacksonville Jaguars</li>
+                                                <li id="selS0V_chzn_o_35" class="active-result group-option" style="">Tennessee Titans</li>
+                                                <li id="selS0V_chzn_g_36" class="group-result">AFC WEST</li>
+                                                <li id="selS0V_chzn_o_37" class="active-result group-option" style="">Denver Broncos</li>
+                                                <li id="selS0V_chzn_o_38" class="active-result group-option" style="">Kansas City Chiefs</li>
+                                                <li id="selS0V_chzn_o_39" class="active-result group-option" style="">Oakland Raiders</li>
+                                                <li id="selS0V_chzn_o_40" class="active-result group-option" style="">San Diego Chargers</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Custom Dropdown Multiple Select</label>
+
+                                <div class="controls">
+
+                                    <select data-placeholder="Your Favorite Football Teams" class="chosen span6 chzn-done" multiple="multiple" tabindex="-1" id="selNAV" style="display: none;">
+
+                                        <option value=""></option>
+
+                                        <optgroup label="NFC EAST">
+
+                                            <option>Dallas Cowboys</option>
+
+                                            <option>New York Giants</option>
+
+                                            <option>Philadelphia Eagles</option>
+
+                                            <option>Washington Redskins</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="NFC NORTH">
+
+                                            <option selected="">Chicago Bears</option>
+
+                                            <option>Detroit Lions</option>
+
+                                            <option>Green Bay Packers</option>
+
+                                            <option>Minnesota Vikings</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="NFC SOUTH">
+
+                                            <option>Atlanta Falcons</option>
+
+                                            <option selected="">Carolina Panthers</option>
+
+                                            <option>New Orleans Saints</option>
+
+                                            <option>Tampa Bay Buccaneers</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="NFC WEST">
+
+                                            <option>Arizona Cardinals</option>
+
+                                            <option>St. Louis Rams</option>
+
+                                            <option>San Francisco 49ers</option>
+
+                                            <option>Seattle Seahawks</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="AFC EAST">
+
+                                            <option>Buffalo Bills</option>
+
+                                            <option>Miami Dolphins</option>
+
+                                            <option>New England Patriots</option>
+
+                                            <option>New York Jets</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="AFC NORTH">
+
+                                            <option>Baltimore Ravens</option>
+
+                                            <option>Cincinnati Bengals</option>
+
+                                            <option>Cleveland Browns</option>
+
+                                            <option>Pittsburgh Steelers</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="AFC SOUTH">
+
+                                            <option>Houston Texans</option>
+
+                                            <option>Indianapolis Colts</option>
+
+                                            <option>Jacksonville Jaguars</option>
+
+                                            <option>Tennessee Titans</option>
+
+                                        </optgroup>
+
+                                        <optgroup label="AFC WEST">
+
+                                            <option>Denver Broncos</option>
+
+                                            <option>Kansas City Chiefs</option>
+
+                                            <option>Oakland Raiders</option>
+
+                                            <option>San Diego Chargers</option>
+
+                                        </optgroup>
+
+                                    </select><div id="selNAV_chzn" class="chzn-container chzn-container-multi" style="width: 430px;">
+                                        <ul class="chzn-choices">
+                                            <li class="search-choice" id="selNAV_chzn_c_7"><span>Chicago Bears</span><a href="javascript:void(0)" class="search-choice-close" rel="7"></a></li>
+                                            <li class="search-choice" id="selNAV_chzn_c_13"><span>Carolina Panthers</span><a href="javascript:void(0)" class="search-choice-close" rel="13"></a></li>
+                                            <li class="search-field">
+                                                <input type="text" value="Your Favorite Football Teams" class="" autocomplete="off" style="width: 25px;" tabindex="6"></li>
+                                        </ul>
+                                        <div class="chzn-drop" style="left: -9000px; width: 428px; top: 33px;">
+                                            <ul class="chzn-results">
+                                                <li id="selNAV_chzn_g_1" class="group-result">NFC EAST</li>
+                                                <li id="selNAV_chzn_o_2" class="active-result group-option" style="">Dallas Cowboys</li>
+                                                <li id="selNAV_chzn_o_3" class="active-result group-option" style="">New York Giants</li>
+                                                <li id="selNAV_chzn_o_4" class="active-result group-option" style="">Philadelphia Eagles</li>
+                                                <li id="selNAV_chzn_o_5" class="active-result group-option" style="">Washington Redskins</li>
+                                                <li id="selNAV_chzn_g_6" class="group-result">NFC NORTH</li>
+                                                <li id="selNAV_chzn_o_7" class="result-selected group-option" style="">Chicago Bears</li>
+                                                <li id="selNAV_chzn_o_8" class="active-result group-option" style="">Detroit Lions</li>
+                                                <li id="selNAV_chzn_o_9" class="active-result group-option" style="">Green Bay Packers</li>
+                                                <li id="selNAV_chzn_o_10" class="active-result group-option" style="">Minnesota Vikings</li>
+                                                <li id="selNAV_chzn_g_11" class="group-result">NFC SOUTH</li>
+                                                <li id="selNAV_chzn_o_12" class="active-result group-option" style="">Atlanta Falcons</li>
+                                                <li id="selNAV_chzn_o_13" class="result-selected group-option" style="">Carolina Panthers</li>
+                                                <li id="selNAV_chzn_o_14" class="active-result group-option" style="">New Orleans Saints</li>
+                                                <li id="selNAV_chzn_o_15" class="active-result group-option" style="">Tampa Bay Buccaneers</li>
+                                                <li id="selNAV_chzn_g_16" class="group-result">NFC WEST</li>
+                                                <li id="selNAV_chzn_o_17" class="active-result group-option" style="">Arizona Cardinals</li>
+                                                <li id="selNAV_chzn_o_18" class="active-result group-option" style="">St. Louis Rams</li>
+                                                <li id="selNAV_chzn_o_19" class="active-result group-option" style="">San Francisco 49ers</li>
+                                                <li id="selNAV_chzn_o_20" class="active-result group-option" style="">Seattle Seahawks</li>
+                                                <li id="selNAV_chzn_g_21" class="group-result">AFC EAST</li>
+                                                <li id="selNAV_chzn_o_22" class="active-result group-option" style="">Buffalo Bills</li>
+                                                <li id="selNAV_chzn_o_23" class="active-result group-option" style="">Miami Dolphins</li>
+                                                <li id="selNAV_chzn_o_24" class="active-result group-option" style="">New England Patriots</li>
+                                                <li id="selNAV_chzn_o_25" class="active-result group-option" style="">New York Jets</li>
+                                                <li id="selNAV_chzn_g_26" class="group-result">AFC NORTH</li>
+                                                <li id="selNAV_chzn_o_27" class="active-result group-option" style="">Baltimore Ravens</li>
+                                                <li id="selNAV_chzn_o_28" class="active-result group-option" style="">Cincinnati Bengals</li>
+                                                <li id="selNAV_chzn_o_29" class="active-result group-option" style="">Cleveland Browns</li>
+                                                <li id="selNAV_chzn_o_30" class="active-result group-option" style="">Pittsburgh Steelers</li>
+                                                <li id="selNAV_chzn_g_31" class="group-result">AFC SOUTH</li>
+                                                <li id="selNAV_chzn_o_32" class="active-result group-option" style="">Houston Texans</li>
+                                                <li id="selNAV_chzn_o_33" class="active-result group-option" style="">Indianapolis Colts</li>
+                                                <li id="selNAV_chzn_o_34" class="active-result group-option" style="">Jacksonville Jaguars</li>
+                                                <li id="selNAV_chzn_o_35" class="active-result group-option" style="">Tennessee Titans</li>
+                                                <li id="selNAV_chzn_g_36" class="group-result">AFC WEST</li>
+                                                <li id="selNAV_chzn_o_37" class="active-result group-option" style="">Denver Broncos</li>
+                                                <li id="selNAV_chzn_o_38" class="active-result group-option" style="">Kansas City Chiefs</li>
+                                                <li id="selNAV_chzn_o_39" class="active-result group-option" style="">Oakland Raiders</li>
+                                                <li id="selNAV_chzn_o_40" class="active-result group-option" style="">San Diego Chargers</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Custom Dropdown Diselect</label>
+
+                                <div class="controls">
+
+                                    <select data-placeholder="Your Favorite Type of Bear" class="chosen-with-diselect span6" tabindex="-1" id="selCSI">
+
+                                        <option value=""></option>
+
+                                        <option>American Black Bear</option>
+
+                                        <option>Asiatic Black Bear</option>
+
+                                        <option>Brown Bear</option>
+
+                                        <option>Giant Panda</option>
+
+                                        <option selected="">Sloth Bear</option>
+
+                                        <option>Sun Bear</option>
+
+                                        <option>Polar Bear</option>
+
+                                        <option>Spectacled Bear</option>
+
+                                    </select>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Radio Buttons</label>
+
+                                <div class="controls">
+
+                                    <label class="radio">
+
+                                        <div class="radio">
+                                            <span>
+                                                <input type="radio" name="optionsRadios1" value="option1"></span>
+                                        </div>
+
+                                        Option 1
+
+                                    </label>
+
+                                    <label class="radio">
+
+                                        <div class="radio">
+                                            <span class="checked">
+                                                <input type="radio" name="optionsRadios1" value="option2" checked=""></span>
+                                        </div>
+
+                                        Option 2
+
+                                    </label>
+
+                                    <label class="radio">
+
+                                        <div class="radio">
+                                            <span>
+                                                <input type="radio" name="optionsRadios1" value="option2"></span>
+                                        </div>
+
+                                        Option 3
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Radio Buttons</label>
+
+                                <div class="controls">
+
+                                    <label class="radio line">
+
+                                        <div class="radio">
+                                            <span>
+                                                <input type="radio" name="optionsRadios2" value="option1"></span>
+                                        </div>
+
+                                        Option 1
+
+                                    </label>
+
+                                    <label class="radio line">
+
+                                        <div class="radio">
+                                            <span class="checked">
+                                                <input type="radio" name="optionsRadios2" value="option2" checked=""></span>
+                                        </div>
+
+                                        Option 2
+
+                                    </label>
+
+                                    <label class="radio line">
+
+                                        <div class="radio">
+                                            <span>
+                                                <input type="radio" name="optionsRadios2" value="option2"></span>
+                                        </div>
+
+                                        Option 3
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Checkbox</label>
+
+                                <div class="controls">
+
+                                    <label class="checkbox">
+
+                                        <div class="checker">
+                                            <span>
+                                                <input type="checkbox" value=""></span>
+                                        </div>
+                                        Checkbox 1
+
+                                    </label>
+
+                                    <label class="checkbox">
+
+                                        <div class="checker">
+                                            <span>
+                                                <input type="checkbox" value=""></span>
+                                        </div>
+                                        Checkbox 2
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Checkbox</label>
+
+                                <div class="controls">
+
+                                    <label class="checkbox line">
+
+                                        <div class="checker">
+                                            <span>
+                                                <input type="checkbox" value=""></span>
+                                        </div>
+                                        Checkbox 1
+
+                                    </label>
+
+                                    <label class="checkbox line">
+
+                                        <div class="checker">
+                                            <span>
+                                                <input type="checkbox" value=""></span>
+                                        </div>
+                                        Checkbox 2
+
+                                    </label>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Checkbox Group</label>
+
+                                <div class="controls">
+
+                                    <div class="row-fluid">
+
+                                        <div class="span3">
+
+                                            <label class="checkbox line">
+
+                                                <div class="checker">
+                                                    <span>
+                                                        <input type="checkbox" value=""></span>
+                                                </div>
+                                                Checkbox 1
+
+                                            </label>
+
+                                            <label class="checkbox line">
+
+                                                <div class="checker">
+                                                    <span>
+                                                        <input type="checkbox" value=""></span>
+                                                </div>
+                                                Checkbox 2
+
+                                            </label>
+
+                                            <label class="checkbox line">
+
+                                                <div class="checker">
+                                                    <span>
+                                                        <input type="checkbox" value=""></span>
+                                                </div>
+                                                Checkbox 3
+
+                                            </label>
+
+                                        </div>
+
+                                        <div class="span3">
+
+                                            <label class="checkbox line">
+
+                                                <div class="checker">
+                                                    <span>
+                                                        <input type="checkbox" value=""></span>
+                                                </div>
+                                                Checkbox 4
+
+                                            </label>
+
+                                            <label class="checkbox line">
+
+                                                <div class="checker">
+                                                    <span>
+                                                        <input type="checkbox" value=""></span>
+                                                </div>
+                                                Checkbox 5
+
+                                            </label>
+
+                                            <label class="checkbox line">
+
+                                                <div class="checker">
+                                                    <span>
+                                                        <input type="checkbox" value=""></span>
+                                                </div>
+                                                Checkbox 6
+
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="control-group">
+
+                                <label class="control-label">Textarea</label>
+
+                                <div class="controls">
+
+                                    <textarea class="span6 m-wrap" rows="3"></textarea>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-actions">
+
+                                <button type="submit" class="btn blue">Submit</button>
+
+                                <button type="button" class="btn">Cancel</button>
+
+                            </div>
+
+                        </form>
+
+                        <!-- END FORM-->
+
+                    </div>
+                </div>
+                <!-- END SAMPLE FORM PORTLET-->
+
+            </div>
+
+        </div>
+
+        <!-- END PAGE CONTENT-->
+
+    </div>
+
+    <!-- END PAGE CONTAINER-->
+
+</div>

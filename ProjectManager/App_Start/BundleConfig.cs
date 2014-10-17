@@ -38,6 +38,14 @@ namespace ProjectManager
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            bundles.Add(new StyleBundle("~/Content/themes/bootstrap/css").Include(
+                "~/Content/themes/bootstrap/css/style.css",
+                "~/Content/themes/bootstrap/css/bootstrap-min.css",
+                "~/Content/themes/bootstrap/css/bootstrap-responsive-min.css",
+                 "~/Content/themes/bootstrap/css/chosen.css",
+                "~/Content/themes/bootstrap/css/style-metro.css"
+                ));
         }
     }
 }
