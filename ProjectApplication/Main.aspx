@@ -4,10 +4,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link href="Content/themes/bootstrap/css/bootstrap-min.css" rel="stylesheet" />
-    <link href="Content/themes/bootstrap/css/bootstrap-responsive-min.css" rel="stylesheet" />
+    <link href="~/Content/themes/bootstrap/css/bootstrap-min.css" rel="stylesheet" />
+    <link href="~/Content/themes/bootstrap/css/bootstrap-responsive-min.css" rel="stylesheet" />
+    <link href="~/Content/themes/bootstrap/css/style.css" rel="stylesheet" />
+    <link href="~/Content/themes/bootstrap/css/style-metro.css" rel="stylesheet" />
 </head>
-<body class="page-header-fixed wysihtml5-supported" style="">
+<body class="page-header-fixed">
 
 	<!-- BEGIN HEADER -->
 
