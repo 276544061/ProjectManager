@@ -404,16 +404,24 @@ namespace ProjectManager.Models
 
 
 
+
+
+		[Column] public string Roles { get; set; }
+
+
+
 	}
 
     
-	[TableName("Pro_RequireMents")]
+	[TableName("Pro_Requirements")]
 
 
-	[PrimaryKey("ID", autoIncrement=false)]
+	[PrimaryKey("ID")]
+
+
 
 	[ExplicitColumns]
-    public partial class RequireMentModel : defaultDB.Record<RequireMentModel>  
+    public partial class RequirementModel : defaultDB.Record<RequirementModel>  
     {
 
 
@@ -455,6 +463,12 @@ namespace ProjectManager.Models
 
 
 		[Column] public int Version { get; set; }
+
+
+
+
+
+		[Column] public string Description { get; set; }
 
 
 
