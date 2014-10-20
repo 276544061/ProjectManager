@@ -10,18 +10,24 @@ namespace ProjectManager.Controllers
 {
     public class RequireController : Controller
     {
-        public ActionResult Add()
+        public ActionResult Add(int id=0)
         {
-            RequireAddViewModel model = new RequireAddViewModel();
-            model.Roles = new List<string>(MyStatus.CurrentProject.Roles.Split(';'));
-            model.Modules =
-                RequirementModel.repo.Fetch<string>(
-                    "select Module_Name from Pro_Requirements where project_id=@0 group by Module_Name",
-                    MyStatus.CurrentProject.ID);
-            model.Areas =
-                RequirementModel.repo.Fetch<string>(
-                    "select Area_Name from Pro_Requirements where project_id=@0 group by Area_Name",
-                    MyStatus.CurrentProject.ID);
+            if (0 == id)
+            {
+                if (null == MyStatus.CurrentProject)
+                {
+                    return RedirectToAction("index", "Project");
+                }
+            }
+            else
+            {
+                MyStatus.CurrentProject = ProjectModel.SingleOrDefault(id);
+            }
+            
+            RequirementModel model = new RequirementModel();
+            ViewBag.Roles = new List<string>(MyStatus.CurrentProject.Roles.Split(';'));
+            ViewBag.ModuleName = new SelectList(ModuleModel.Fetch("where project_id=@0", MyStatus.CurrentProject.ID));
+            ViewBag.AreaName = new SelectList(AreaModel.Fetch("where project_id=@0", MyStatus.CurrentProject.ID));
             return View(model);
         }
 

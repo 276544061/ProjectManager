@@ -36,6 +36,12 @@ namespace ProjectManager.Models
             [Required]
             [UIHint("Text")]
             public string Description { get; set; }
+
+            [Display(Name = "角色")]
+            [StringLength(200)]
+            [Required]
+            [UIHint("Text")]
+            public string Roles { get; set; }
         }
 	}
 }

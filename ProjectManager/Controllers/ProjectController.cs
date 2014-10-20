@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using PetaPoco;
+using ProjectManager.Common;
 using ProjectManager.Models;
 
 namespace ProjectManager.Controllers
@@ -41,6 +42,26 @@ namespace ProjectManager.Controllers
             return Json(result);
         }
 
+        [HttpGet]
+        public ActionResult Edit(int id=0)
+        {
+            ProjectModel model = ProjectModel.SingleOrDefault(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(ProjectModel model)
+        {
+            ResultModel<ProjectModel> result = new ResultModel<ProjectModel>();
+            result.Res = true;
+            result.Msg = "保存成功";
+            if (ModelState.IsValid)
+            {
+                model.Update();
+            }
+            return Json(result);
+        }
+
         public ActionResult Delete(int id = 0)
         {
             ResultModel<ProjectModel> result = new ResultModel<ProjectModel>();
@@ -53,6 +74,19 @@ namespace ProjectManager.Controllers
             result.Res = ProjectModel.Delete(id) == 1;
             result.Msg = string.Format("删除成功");
             return RedirectToAction("index");
+        }
+
+        public ActionResult Change(int id = 0)
+        {
+            ResultModel<ProjectModel> result = new ResultModel<ProjectModel>();
+            if (0 == id)
+            {
+                result.Res = false;
+                result.Msg = "无效参数";
+            }
+            ProjectModel model = ProjectModel.SingleOrDefault(id);
+            MyStatus.CurrentProject = model;
+            return Json(result);
         }
     }
 }

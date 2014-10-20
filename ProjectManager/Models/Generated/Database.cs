@@ -472,6 +472,76 @@ namespace ProjectManager.Models
 
 
 
+
+
+		[Column("Project_ID")] public int ProjectID { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Module")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class ModuleModel : defaultDB.Record<ModuleModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column("Project_ID")] public int ProjectID { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Area")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class AreaModel : defaultDB.Record<AreaModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column("Project_ID")] public int? ProjectID { get; set; }
+
+
+
 	}
 
 

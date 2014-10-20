@@ -44,7 +44,9 @@ namespace ProjectManager
                 "~/Content/themes/bootstrap/css/bootstrap-min.css",
                 "~/Content/themes/bootstrap/css/bootstrap-responsive-min.css",
                  "~/Content/themes/bootstrap/css/chosen.css",
-                "~/Content/themes/bootstrap/css/style-metro.css"
+                "~/Content/themes/bootstrap/css/style-metro.css", 
+                "~/Content/themes/bootstrap/css/default.css",
+                "~/Content/themes/bootstrap/css/uniform.default.css"
                 ));
 
             bundles.Add(new ScriptBundle("~/Content/artDialog").Include(

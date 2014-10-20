@@ -23,11 +23,12 @@
                     </div>
                     <div class="portlet-body form">
 
-                        @using (Ajax.BeginForm("add", "project", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
+                        @using (Ajax.BeginForm("Edit", "project", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
                         {
                             @Html.EditorFor(m => m.Name)
                             @Html.EditorFor(m => m.Description)
                             @Html.EditorFor(m=>m.Roles)
+                            @Html.HiddenFor(m=>m.ID)
                             <div class="form-actions">
                                 <button type="submit" class="btn blue">Submit</button>
                                 <button type="button" class="btn">Cancel</button>

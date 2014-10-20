@@ -1,4 +1,4 @@
-﻿@model RequireAddViewModel
+﻿@model RequirementModel
 
 @{
     ViewBag.Title = "添加需求";
@@ -7,7 +7,7 @@
 
 @section scripts
 {
-    @Styles.Render("~/Content/umeditor/themes/defaccult/css/umeditor.min.css")
+    @Styles.Render("~/Content/umeditor/themes/default/css/umeditor.min.css")
     @Scripts.Render("~/Content/umeditor/umeditor.config.js")
     @Scripts.Render("~/Content/umeditor/umeditor.min.js")
     @Scripts.Render("~/Content/umeditor/lang/zh-cn/zh-cn.js")
@@ -40,90 +40,41 @@
 
                         @using (Ajax.BeginForm("add", "project", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
                         {
-                            @Html.EditorFor(m => m.Item.Name)
+                            @Html.EditorFor(m => m.Name)
                             <div class="control-group">
-                                @Html.LabelFor(m => m.Roles, new { @class = "control-label" })
+                                @Html.LabelFor(m => m.AreaName, new { @class = "control-label" })
                                 <div class="controls">
-                                   @*@Html.DropDownListFor(m=>m.Item.ModuleName,)*@
+                                    @Html.DropDownListFor(m=>m.AreaName,null,new{@class="large m-wrap"})
                                 </div>
                             </div>
-                            @Html.EditorFor(m => m.Item.ModuleName)
-                            @Html.EditorFor(m => m.Item.AreaName)
+                            <div class="control-group">
+                                @Html.LabelFor(m => m.ModuleName, new { @class = "control-label" })
+                                <div class="controls">
+                                    @Html.DropDownListFor(m=>m.ModuleName,null,new{@class="large m-wrap"})
+                                </div>
+                            </div>
                             <div class="control-group">
                                 @Html.LabelFor(m => m.Roles, new { @class = "control-label" })
                                 <div class="controls">
-                                    @foreach (string item in Model.Roles)
+                                    @foreach (string item in ViewBag.Roles as List<string>)
                                     {
-                                        <input type="checkbox" name="Item.Roles" value="@item"/>
+                                        <label class="checkbox">
+                                            <div class="checker"><span>
+                                                <input type="checkbox" name="Roles" value="@item"/></span></div>@item
+                                        </label>
                                     }
                                 </div>
                             </div>
-                            @Html.EditorFor(m => m.Item.DataSource)
+                            @Html.EditorFor(m => m.DataSource)
                             <div class="control-group">
-                                @Html.LabelFor(m => m.Item.Description, new { @class = "control-label" })
+                                @Html.LabelFor(m => m.Description, new { @class = "control-label" })
                                 <div class="controls">
                                     <!-- 加载编辑器的容器 -->
                                     <script id="container" name="content" type="text/plain">
                                     </script>
-                                    @Html.ValidationMessageFor(m => m.Item.Description)
+                                    @Html.ValidationMessageFor(m => m.Description)
                                 </div>
                             </div>
-                            <div class="control-group">
-										<label class="control-label">Custom Dropdown Multiple Select</label>
-										<div class="controls">
-											<select data-placeholder="Your Favorite Football Teams" class="chosen span6" multiple="multiple" tabindex="6">
-												<option value=""></option>
-												<optgroup label="NFC EAST">
-													<option>Dallas Cowboys</option>
-													<option>New York Giants</option>
-													<option>Philadelphia Eagles</option>
-													<option>Washington Redskins</option>
-												</optgroup>
-												<optgroup label="NFC NORTH">
-													<option selected>Chicago Bears</option>
-													<option>Detroit Lions</option>
-													<option>Green Bay Packers</option>
-													<option>Minnesota Vikings</option>
-												</optgroup>
-												<optgroup label="NFC SOUTH">
-													<option>Atlanta Falcons</option>
-													<option selected>Carolina Panthers</option>
-													<option>New Orleans Saints</option>
-													<option>Tampa Bay Buccaneers</option>
-												</optgroup>
-												<optgroup label="NFC WEST">
-													<option>Arizona Cardinals</option>
-													<option>St. Louis Rams</option>
-													<option>San Francisco 49ers</option>
-													<option>Seattle Seahawks</option>
-												</optgroup>
-												<optgroup label="AFC EAST">
-													<option>Buffalo Bills</option>
-													<option>Miami Dolphins</option>
-													<option>New England Patriots</option>
-													<option>New York Jets</option>
-												</optgroup>
-												<optgroup label="AFC NORTH">
-													<option>Baltimore Ravens</option>
-													<option>Cincinnati Bengals</option>
-													<option>Cleveland Browns</option>
-													<option>Pittsburgh Steelers</option>
-												</optgroup>
-												<optgroup label="AFC SOUTH">
-													<option>Houston Texans</option>
-													<option>Indianapolis Colts</option>
-													<option>Jacksonville Jaguars</option>
-													<option>Tennessee Titans</option>
-												</optgroup>
-												<optgroup label="AFC WEST">
-													<option>Denver Broncos</option>
-													<option>Kansas City Chiefs</option>
-													<option>Oakland Raiders</option>
-													<option>San Diego Chargers</option>
-												</optgroup>
-											</select>
-										</div>
-									</div>
                             <div class="form-actions">
                                 <button type="submit" class="btn blue">保存</button>
                                 <button type="button" class="btn">取消</button>
