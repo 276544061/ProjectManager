@@ -47,8 +47,8 @@
                                    @*@Html.DropDownListFor(m=>m.Item.ModuleName,)*@
                                 </div>
                             </div>
-                            @Html.EditorFor(m => m.ModuleName)
-                            @Html.EditorFor(m => m.AreaName)
+                            @Html.EditorFor(m => m.Item.ModuleName)
+                            @Html.EditorFor(m => m.Item.AreaName)
                             <div class="control-group">
                                 @Html.LabelFor(m => m.Roles, new { @class = "control-label" })
                                 <div class="controls">
@@ -58,14 +58,14 @@
                                     }
                                 </div>
                             </div>
-                            @Html.EditorFor(m => m.DataSource)
+                            @Html.EditorFor(m => m.Item.DataSource)
                             <div class="control-group">
-                                @Html.LabelFor(m => m.Description, new { @class = "control-label" })
+                                @Html.LabelFor(m => m.Item.Description, new { @class = "control-label" })
                                 <div class="controls">
                                     <!-- 加载编辑器的容器 -->
                                     <script id="container" name="content" type="text/plain">
                                     </script>
-                                    @Html.ValidationMessageFor(m => m.Description)
+                                    @Html.ValidationMessageFor(m => m.Item.Description)
                                 </div>
                             </div>
                             <div class="control-group">
