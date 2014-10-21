@@ -410,6 +410,12 @@ namespace ProjectManager.Models
 
 
 
+
+
+		[Column] public int Version { get; set; }
+
+
+
 	}
 
     

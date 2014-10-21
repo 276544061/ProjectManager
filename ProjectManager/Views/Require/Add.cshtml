@@ -11,19 +11,43 @@
     @Scripts.Render("~/Content/umeditor/umeditor.config.js")
     @Scripts.Render("~/Content/umeditor/umeditor.min.js")
     @Scripts.Render("~/Content/umeditor/lang/zh-cn/zh-cn.js")
+    @Scripts.Render("~/Content/themes/bootstrap/js/jquery.uniform.min.js")
     <script type="text/javascript">
         function success(data) {
             SuccessTip(data.Msg);
         }
 
+        function create_module() {
+            dialog({ url: '/module/add',title:'添加模块' }).showModal();
+        }
+
         var um = UM.getEditor('container', {
-            initialFrameWidth: 539, initialFrameHeight: 300, toolbar: [
+            initialFrameWidth: 539,
+            initialFrameHeight: 300,
+            toolbar: [
                 'bold italic underline strikethrough | superscript subscript | forecolor backcolor | removeformat |',
                 'insertorderedlist insertunorderedlist',
                 '| justifyleft justifycenter justifyright justifyjustify |',
                 'link unlink ']
         });
 
+        var handleUniform = function() {
+
+            if (!jQuery().uniform) {
+
+                return;
+            }
+            var test = $("input[type=checkbox]:not(.toggle), input[type=radio]:not(.toggle, .star)");
+            if (test.size() > 0) {
+                test.each(function() {
+                    if ($(this).parents(".checker").size() == 0) {
+                        $(this).show();
+                        $(this).uniform();
+                    }
+                });
+            }
+        };
+        handleUniform();
     </script>
 }
 <div class="page-content">
@@ -51,6 +75,7 @@
                                 @Html.LabelFor(m => m.ModuleName, new { @class = "control-label" })
                                 <div class="controls">
                                     @Html.DropDownListFor(m=>m.ModuleName,null,new{@class="large m-wrap"})
+                                    <a href="javascript:void(0);" onclick="create_module()">添加模块</a>
                                 </div>
                             </div>
                             <div class="control-group">
@@ -59,8 +84,7 @@
                                     @foreach (string item in ViewBag.Roles as List<string>)
                                     {
                                         <label class="checkbox">
-                                            <div class="checker"><span>
-                                                <input type="checkbox" name="Roles" value="@item"/></span></div>@item
+                                                <input type="checkbox" name="Roles" value="@item"/>@item
                                         </label>
                                     }
                                 </div>

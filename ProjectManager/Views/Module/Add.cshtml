@@ -1,0 +1,43 @@
+﻿@model ProjectManager.Models.ModuleModel
+
+@{
+    ViewBag.Title = "添加模块";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+        function success(data) {
+            SuccessTip(data.Msg);
+        }
+    </script>
+}
+<div class="page-content">
+    <!-- 页面容器开始-->
+    <div class="container-fluid">
+        <!-- 页面内容开始-->
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="portlet box blue">
+                    <div class="portlet-title">
+                        <div class="caption"><i class="icon-reorder"></i>创建项目</div>
+                    </div>
+                    <div class="portlet-body form">
+
+                        @using (Ajax.BeginForm("add", "Module", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
+                        {
+                            @Html.EditorFor(m => m.Name)
+                            <div class="form-actions">
+                                <button type="submit" class="btn blue">保存</button>
+                                <button type="button" class="btn">取消</button>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--页面内容结束-->
+    </div>
+    <!--页面容器结束-->
+</div>
