@@ -1,41 +1,41 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>@ViewBag.Title</title>
-  @*  @Styles.Render("~/Content/themes/bootstrap/css/bootstrap.min.css")
-    @Styles.Render("~/Content/themes/bootstrap/css/style-metro.css")*@
-    @Styles.Render("~/Content/themes/bootstrap/css")
-    @*@Scripts.Render("~/bundles/modernizr")*@
-    @RenderSection("header", required: false)
+    <link href="~/Content/css/common.css" rel="stylesheet" />
+    <link href="~/Content/css/backstage.css" rel="stylesheet" />
+    <script src="~/Content/js/jquery-1.8.2.min.js"></script>
+    @RenderSection("header", false)
 </head>
 <body>
-    @RenderBody()
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryval")
-    @Styles.Render("~/Content/artDialog/css/ui-dialog.css")
-    @Scripts.Render("~/Content/artDialog")
-    @Scripts.Render("~/Content/mmGrid")
-    @RenderSection("footer", required: false)
-    @RenderSection("scripts", required: false)
-    <script type="text/javascript">
-        function SuccessTip(con, onClose, showTime) {
-            if (0 == showTime || !showTime) {
-                showTime = 3;
-            }
-            var d = dialog({
-                content: con
-            });
-            d.show();
-            setTimeout(function () {
-                if (onClose) {
-                    onClose();
-                }
-                d.close().remove();
-            }, showTime*1000);
-        }
-    </script>
+    <!-- top导航 -->
+    @Html.Partial("TopNavPartialView")
+    <!-- /top导航 -->
+    <!-- 头部 -->
+    @Html.Partial("HeaderPartialView")
+    <!-- /头部 -->
+    <!-- 主体 -->
+    <div class="g-bd f-cb">
+        <div class="m-main">
+            <!-- 左侧 -->
+            <div class="g-sd">
+                <!-- 左侧菜单 -->
+                @Html.Partial("MenuPartialView")
+                <!-- /左侧菜单 -->
+            </div>
+            <!-- /左侧 -->
+            <!-- 主体内容 -->
+            <div class="g-mn">
+                <div class="g-mnc f-cb">
+                    <iframe id="mainRigh" width="100%" name="mainContent" frameborder="0" height="800"></iframe>
+                </div>
+            </div>
+            <!-- /主体内容 -->
+        </div>
+    </div>
+    <!-- /主体 -->
+    <!-- 尾部 -->
+    @Html.Partial("FooterPartialView")
+    <!-- /尾部 -->
 </body>
 </html>

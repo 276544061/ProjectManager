@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+body{background:#f9f9f9;}
+/* 头部 */
+.g-hd{ height:40px; border-bottom:1px solid #e5e5e5; background:#f8f8f8; padding:20px 0;}
+.m-hd{ width:920px; margin:0 auto; padding-left:80px; vertical-align:text-bottom; font-weight:500;}
+.m-hd a{ line-height:40px; color:#2898dc; font-size:20px; padding-right:15px; border-right:2px #8f8f8f solid;}
+.m-hd i{ line-height:40px; color:#8f8f8f; font-size:20px; margin-left:15px;}
+
+/* 登录框 */
+.g-con{ margin-bottom:110px;height:360px; background:#36aaee;}
+.m-con{ position:relative; width:1000px; height:360px; margin:0 auto; background:url(Images/bgCon.jpg) no-repeat;}
+.m-login{ position:absolute; right:140px; bottom:-35px; width:430px; height:315px; background:#fdfdfd; border:1px solid #cfcfcf;-webkit-border-radius: 6px;-moz-border-radius:6px;border-radius:6px;-webkit-box-shadow:#f3fafc 0 5px 0; -moz-box-shadow:#f3fafc 0 5px 0; box-shadow:#f3fafc 0 5px 0;}
+.m-login h3{ line-height:57px; border-bottom:1px solid #bfc3c5; font-size:16px; color:#8f8f8f; font-weight:500; text-indent:40px; background:url(Images/bglogTitle.jpg) repeat-x;-webkit-box-shadow:#ebebeb 0 2px 0; -moz-box-shadow:#ebebeb 0 2px 0; box-shadow:#ebebeb 0 2px 0;}
+.m-login p{ margin-top:10px; padding:0 25px;text-align:center; line-height:24px;}
+.m-login dl{ margin-top:10px;}
+.m-login dl dt, .m-login dl dd{float:left;line-height:40px; margin:5px 0; font-size:14px; color:#737373;}
+.m-login dl dt{clear:left; text-align:right;}
+.m-login dl dt{width:80px;}
+.m-login dl dt i{padding-right:5px; color:#F00; vertical-align:middle;}
+.m-login dl dd{padding-left:5px; text-align:left;}
+.m-login dl dd span, .m-login dl dd a{line-height:30px; font-size:12px;}
+.m-login dl dd{width:74%;}
+.m-login dl dd a{ color:#2898dc;}
+.m-login dl dd a:hover{ text-decoration:underline;}
+.m-bgw{ background:#FFF!important;}
+
+/* 输入框 */
+.u-ipt{width:300px; height:30px; line-height:30px; border:1px solid #ddd;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;}
+
+/* 登录按钮 */
+.u-btn{ width:108px; height:34px; line-height:35px; background:url(Images/logBtn.gif) 0 0 no-repeat; color:#fff;}
+.u-btn:hover{ background-position:0 -41px;}
+
+/* 底部 */
+.g-ft{padding-top:35px; border-top:1px solid #e0e3e4;}
+.m-ft{line-height:25px;text-align:center;}
+
+
+
