@@ -1,0 +1,38 @@
+﻿@model ProjectManager.Models.ModuleModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SimpleAdd</title>
+    <link href="~/Content/css/common.css" rel="stylesheet" />
+    <link href="~/Content/css/backstage.css" rel="stylesheet" />
+    <script src="~/Content/js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+    <div class="m-content">
+        @using (Ajax.BeginForm("add", "Module", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
+        {
+            <div class="m-form f-cb">
+                <dl class="f-cb s-borderbg">
+                    <dt><i>*</i>@Html.LabelFor(m => m.Name)</dt>
+                    <dd>
+                        @Html.TextBoxFor(m => m.Name, new { @class = "u-iptl" })
+                    </dd>
+                    <dt></dt>
+                    <dd>
+                        <input type="submit" class="u-btnblue" value="保存">
+                        <input type="button" class="u-btnblue marl10" value="取消">
+                    </dd>
+                </dl>
+            </div>
+        }
+    </div>
+
+</body>
+</html>

@@ -15,6 +15,12 @@ namespace ProjectManager.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult SimpleAdd()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult Add(ModuleModel model)
         {

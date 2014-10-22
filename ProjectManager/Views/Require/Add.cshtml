@@ -4,21 +4,24 @@
     ViewBag.Title = "添加需求";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section header{
+    <link href="~/Content/umeditor/themes/default/css/umeditor.min.css" rel="stylesheet" />
+    <link href="~/Content/artDialog/skins/default.css" rel="stylesheet" />
+}
 
 @section scripts
 {
-    @Styles.Render("~/Content/umeditor/themes/default/css/umeditor.min.css")
-    @Scripts.Render("~/Content/umeditor/umeditor.config.js")
-    @Scripts.Render("~/Content/umeditor/umeditor.min.js")
-    @Scripts.Render("~/Content/umeditor/lang/zh-cn/zh-cn.js")
-    @Scripts.Render("~/Content/themes/bootstrap/js/jquery.uniform.min.js")
+    <script src="~/Content/umeditor/umeditor.config.js"></script>
+    <script src="~/Content/umeditor/umeditor.min.js"></script>
+    <script src="~/Content/artDialog/jquery.artDialog.js"></script>
+    <script src="~/Content/artDialog/plugins/iframeTools.js"></script>
     <script type="text/javascript">
         function success(data) {
             SuccessTip(data.Msg);
         }
 
         function create_module() {
-            dialog({ url: '/module/add',title:'添加模块' }).showModal();
+            $.dialog.open('@Url.Action("SimpleAdd","Module")',{title:'添加模块',width:470,height:140});
         }
 
         var um = UM.getEditor('container', {
@@ -31,85 +34,50 @@
                 'link unlink ']
         });
 
-        var handleUniform = function() {
 
-            if (!jQuery().uniform) {
-
-                return;
-            }
-            var test = $("input[type=checkbox]:not(.toggle), input[type=radio]:not(.toggle, .star)");
-            if (test.size() > 0) {
-                test.each(function() {
-                    if ($(this).parents(".checker").size() == 0) {
-                        $(this).show();
-                        $(this).uniform();
-                    }
-                });
-            }
-        };
-        handleUniform();
     </script>
 }
-<div class="page-content">
-    <!-- 页面容器开始-->
-    <div class="container-fluid">
-        <!-- 页面内容开始-->
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="portlet box blue">
-                    <div class="portlet-title">
-                        <div class="caption"><i class="icon-reorder"></i>添加需求</div>
-                    </div>
-                    <div class="portlet-body form">
-
-                        @using (Ajax.BeginForm("add", "project", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
-                        {
-                            @Html.EditorFor(m => m.Name)
-                            <div class="control-group">
-                                @Html.LabelFor(m => m.AreaName, new { @class = "control-label" })
-                                <div class="controls">
-                                    @Html.DropDownListFor(m=>m.AreaName,null,new{@class="large m-wrap"})
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                @Html.LabelFor(m => m.ModuleName, new { @class = "control-label" })
-                                <div class="controls">
-                                    @Html.DropDownListFor(m=>m.ModuleName,null,new{@class="large m-wrap"})
-                                    <a href="javascript:void(0);" onclick="create_module()">添加模块</a>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                @Html.LabelFor(m => m.Roles, new { @class = "control-label" })
-                                <div class="controls">
-                                    @foreach (string item in ViewBag.Roles as List<string>)
-                                    {
-                                        <label class="checkbox">
-                                                <input type="checkbox" name="Roles" value="@item"/>@item
-                                        </label>
-                                    }
-                                </div>
-                            </div>
-                            @Html.EditorFor(m => m.DataSource)
-                            <div class="control-group">
-                                @Html.LabelFor(m => m.Description, new { @class = "control-label" })
-                                <div class="controls">
-                                    <!-- 加载编辑器的容器 -->
-                                    <script id="container" name="content" type="text/plain">
-                                    </script>
-                                    @Html.ValidationMessageFor(m => m.Description)
-                                </div>
-                            </div>
-                            <div class="form-actions">
-                                <button type="submit" class="btn blue">保存</button>
-                                <button type="button" class="btn">取消</button>
-                            </div>
-                        }
-
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--页面内容结束-->
+@using (Ajax.BeginForm("add", "project", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
+{
+    <div class="m-form f-cb">
+        <dl class="f-cb s-borderbg">
+            <dt><i>*</i>@Html.LabelFor(m => m.Name)</dt>
+            <dd>
+                @Html.TextBoxFor(m => m.Name, new { @class = "u-iptl" })
+            </dd>
+            <dt><i>*</i>@Html.LabelFor(m => m.AreaName)</dt>
+            <dd>
+                @Html.DropDownListFor(m => m.AreaName, null, new { @class = "u-sltl" })
+            </dd>
+            <dt><i>*</i>@Html.LabelFor(m => m.ModuleName)</dt>
+            <dd>
+                @Html.DropDownListFor(m => m.ModuleName, null, new { @class = "u-sltl" })
+                <a href="javascript:void(0);" onclick=" create_module() ">添加模块</a>
+            </dd>
+            <dt><i>*</i>@Html.LabelFor(m => m.Roles)</dt>
+            <dd>
+                @foreach (string item in ViewBag.Roles as List<string>)
+                {
+                    <input type="checkbox" name="Roles" value="@item"/>
+                    @item
+                }
+            </dd>
+            <dt><i>*</i>@Html.LabelFor(m => m.DataSource)</dt>
+            <dd>
+                @Html.TextBoxFor(m => m.DataSource, new { @class = "u-iptl" })
+            </dd>
+            <dt><i>*</i>@Html.LabelFor(m => m.Description)</dt>
+            <dd>
+                <!-- 加载编辑器的容器 -->
+                <script id="container" name="content" type="text/plain">
+                </script>
+                @Html.ValidationMessageFor(m => m.Description)
+            </dd>
+            <dt></dt>
+            <dd>
+                <input type="submit" class="u-btnblue" value="保存">
+                <input type="button" class="u-btnblue marl10" value="取消">
+            </dd>
+        </dl>
     </div>
-    <!--页面容器结束-->
-</div>
+}

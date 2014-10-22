@@ -13,31 +13,19 @@
         }
     </script>
 }
-<div class="page-content">
-    <!-- 页面容器开始-->
-    <div class="container-fluid">
-        <!-- 页面内容开始-->
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="portlet box blue">
-                    <div class="portlet-title">
-                        <div class="caption"><i class="icon-reorder"></i>创建项目</div>
-                    </div>
-                    <div class="portlet-body form">
-
-                        @using (Ajax.BeginForm("add", "Module", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
-                        {
-                            @Html.EditorFor(m => m.Name)
-                            <div class="form-actions">
-                                <button type="submit" class="btn blue">保存</button>
-                                <button type="button" class="btn">取消</button>
-                            </div>
-                        }
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--页面内容结束-->
+@using (Ajax.BeginForm("add", "Module", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
+{
+    <div class="m-form f-cb">
+        <dl class="f-cb s-borderbg">
+             <dt><i>*</i>@Html.LabelFor(m => m.Name)</dt>
+            <dd>
+                @Html.TextBoxFor(m => m.Name, new { @class = "u-iptl" })
+            </dd>
+            <dt></dt>
+            <dd>
+                <input type="submit" class="u-btnblue" value="保存">
+                <input type="button" class="u-btnblue marl10" value="取消">
+            </dd>
+        </dl>
     </div>
-    <!--页面容器结束-->
-</div>
+}

@@ -27,7 +27,7 @@
             <!-- 主体内容 -->
             <div class="g-mn">
                 <div class="g-mnc f-cb">
-                    <iframe id="mainRigh" width="100%" name="mainContent" frameborder="0" height="800"></iframe>
+                    @RenderBody()
                 </div>
             </div>
             <!-- /主体内容 -->
@@ -37,5 +37,7 @@
     <!-- 尾部 -->
     @Html.Partial("FooterPartialView")
     <!-- /尾部 -->
+    @RenderSection("footer", false)
+    @RenderSection("scripts", false)
 </body>
 </html>
