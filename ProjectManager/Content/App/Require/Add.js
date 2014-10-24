@@ -1,6 +1,6 @@
 ﻿var App = {};
 App.SaveSuccess=function(data) {
-    Common.SuccessTip(data.Msg);
+    Common.Tips(data);
 }
 App.CreateModule=function() {
     $.dialog.open('/Module/SimpleAdd', {

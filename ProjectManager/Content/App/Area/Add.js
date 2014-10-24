@@ -1,4 +1,4 @@
 ﻿var App = {};
 App.SaveSuccess = function (data) {
-    Common.Tips(data,  $.dialog.close());
+    Common.Tips(data, function () { $.dialog.close(); });
 }

@@ -25,7 +25,7 @@
 // 
 //     Connection String Name: `default`
 //     Provider:               `System.Data.SqlClient`
-//     Connection String:      `Data Source=hds-100.hichina.com;Initial Catalog=hds1000942_db;uid=hds1000942;pwd=marry926927`
+//     Connection String:      `Data Source=.\t;Initial Catalog=da;uid=sa;pwd=123456`
 //     Schema:                 ``
 //     Include Views:          `False`
 
@@ -135,7 +135,7 @@ namespace ProjectManager.Models
 
 
     
-	[TableName("Sys_User")]
+	[TableName("Pro_Project")]
 
 
 	[PrimaryKey("ID")]
@@ -143,7 +143,7 @@ namespace ProjectManager.Models
 
 
 	[ExplicitColumns]
-    public partial class UserModel : defaultDB.Record<UserModel>  
+    public partial class ProjectModel : defaultDB.Record<ProjectModel>  
     {
 
 
@@ -160,55 +160,127 @@ namespace ProjectManager.Models
 
 
 
-		[Column] public string Code { get; set; }
+		[Column] public string Description { get; set; }
 
 
 
 
 
-		[Column] public string Pwd { get; set; }
+		[Column] public string Roles { get; set; }
 
 
 
 
 
-		[Column] public int Salt { get; set; }
+		[Column] public int Version { get; set; }
 
 
 
 
 
-		[Column] public string Email { get; set; }
+		[Column("Need_Constraint")] public string NeedConstraint { get; set; }
 
 
 
 
 
-		[Column] public int Phone { get; set; }
+		[Column] public string Premise { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Requirements")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class RequirementModel : defaultDB.Record<RequirementModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
 
 
 
 
 
-		[Column] public int QQ { get; set; }
+		[Column] public string Name { get; set; }
 
 
 
 
 
-		[Column("Del_Flag")] public int DelFlag { get; set; }
+		[Column("Module_Name")] public string ModuleName { get; set; }
 
 
 
 
 
-		[Column] public string Job { get; set; }
+		[Column("Area_Name")] public string AreaName { get; set; }
 
 
 
 
 
-		[Column] public string Position { get; set; }
+		[Column] public string Roles { get; set; }
+
+
+
+
+
+		[Column("Data_Source")] public string DataSource { get; set; }
+
+
+
+
+
+		[Column] public int Version { get; set; }
+
+
+
+
+
+		[Column] public string Description { get; set; }
+
+
+
+
+
+		[Column("Project_ID")] public int ProjectID { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Sys_Config")]
+
+
+	[ExplicitColumns]
+    public partial class ConfigModel : defaultDB.Record<ConfigModel>  
+    {
+
+
+
+		[Column("Config_Key")] public string ConfigKey { get; set; }
+
+
+
+
+
+		[Column("Config_Value")] public string ConfigValue { get; set; }
+
+
+
+
+
+		[Column("Config_Type")] public string ConfigType { get; set; }
 
 
 
@@ -253,34 +325,6 @@ namespace ProjectManager.Models
 
 
 		[Column("Child_Flag")] public int? ChildFlag { get; set; }
-
-
-
-	}
-
-    
-	[TableName("Sys_Config")]
-
-
-	[ExplicitColumns]
-    public partial class ConfigModel : defaultDB.Record<ConfigModel>  
-    {
-
-
-
-		[Column("Config_Key")] public string ConfigKey { get; set; }
-
-
-
-
-
-		[Column("Config_Value")] public string ConfigValue { get; set; }
-
-
-
-
-
-		[Column("Config_Type")] public string ConfigType { get; set; }
 
 
 
@@ -375,7 +419,7 @@ namespace ProjectManager.Models
 	}
 
     
-	[TableName("Pro_Project")]
+	[TableName("Sys_User")]
 
 
 	[PrimaryKey("ID")]
@@ -383,7 +427,7 @@ namespace ProjectManager.Models
 
 
 	[ExplicitColumns]
-    public partial class ProjectModel : defaultDB.Record<ProjectModel>  
+    public partial class UserModel : defaultDB.Record<UserModel>  
     {
 
 
@@ -400,119 +444,55 @@ namespace ProjectManager.Models
 
 
 
-		[Column] public string Description { get; set; }
+		[Column] public string Code { get; set; }
 
 
 
 
 
-		[Column] public string Roles { get; set; }
+		[Column] public string Pwd { get; set; }
 
 
 
 
 
-		[Column] public int Version { get; set; }
+		[Column] public int Salt { get; set; }
 
 
 
-	}
 
-    
-	[TableName("Pro_Requirements")]
 
+		[Column] public string Email { get; set; }
 
-	[PrimaryKey("ID")]
 
 
 
-	[ExplicitColumns]
-    public partial class RequirementModel : defaultDB.Record<RequirementModel>  
-    {
 
+		[Column] public int Phone { get; set; }
 
 
-		[Column] public int ID { get; set; }
 
 
 
+		[Column] public int QQ { get; set; }
 
 
-		[Column] public string Name { get; set; }
 
 
 
+		[Column("Del_Flag")] public int DelFlag { get; set; }
 
 
-		[Column("Module_Name")] public string ModuleName { get; set; }
 
 
 
+		[Column] public string Job { get; set; }
 
 
-		[Column("Area_Name")] public string AreaName { get; set; }
 
 
 
-
-
-		[Column] public string Roles { get; set; }
-
-
-
-
-
-		[Column("Data_Source")] public string DataSource { get; set; }
-
-
-
-
-
-		[Column] public int Version { get; set; }
-
-
-
-
-
-		[Column] public string Description { get; set; }
-
-
-
-
-
-		[Column("Project_ID")] public int ProjectID { get; set; }
-
-
-
-	}
-
-    
-	[TableName("Pro_Module")]
-
-
-	[PrimaryKey("ID")]
-
-
-
-	[ExplicitColumns]
-    public partial class ModuleModel : defaultDB.Record<ModuleModel>  
-    {
-
-
-
-		[Column] public int ID { get; set; }
-
-
-
-
-
-		[Column] public string Name { get; set; }
-
-
-
-
-
-		[Column("Project_ID")] public int ProjectID { get; set; }
+		[Column] public string Position { get; set; }
 
 
 
@@ -545,6 +525,38 @@ namespace ProjectManager.Models
 
 
 		[Column("Project_ID")] public int? ProjectID { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Module")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class ModuleModel : defaultDB.Record<ModuleModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column("Project_ID")] public int ProjectID { get; set; }
 
 
 
