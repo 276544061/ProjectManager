@@ -8,22 +8,23 @@ using ProjectManager.Models;
 
 namespace ProjectManager.Controllers
 {
-    public class ModuleController : Controller
+    public class AreaController : Controller
     {
+        public ActionResult Load()
+        {
+            ResultModel<List<AreaModel>> result = new ResultModel<List<AreaModel>>();
+            result.Data = AreaModel.Fetch("where project_id=@0", MyStatus.CurrentProject.ID);
+            return Json(result);
+        }
+
         [HttpGet]
         public ActionResult Add()
         {
             return View();
         }
 
-        [HttpGet]
-        public ActionResult SimpleAdd()
-        {
-            return View();
-        }
-
         [HttpPost]
-        public ActionResult Add(ModuleModel model)
+        public ActionResult Add(AreaModel model)
         {
             if (ModelState.IsValid)
             {
@@ -31,13 +32,6 @@ namespace ProjectManager.Controllers
                 model.Insert();
             }
             return Json(new ResultModel<ModuleModel>());
-        }
-
-        public ActionResult Load()
-        {
-            ResultModel<List<ModuleModel>> result=new ResultModel<List<ModuleModel>>();
-            result.Data = ModuleModel.Fetch("where project_id=@0", MyStatus.CurrentProject.ID);
-            return Json(result);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model ProjectManager.Models.ModuleModel
+﻿@model ProjectManager.Models.AreaModel
 
 @{
     Layout = null;
@@ -20,11 +20,11 @@
     <script src="~/Content/artDialog/jquery.artDialog.js"></script>
     <script src="~/Content/artDialog/plugins/iframeTools.js"></script>
     <link href="~/Content/artDialog/skins/default.css" rel="stylesheet" />
-    <script src="~/Content/App/Module/SimpleAdd.js"></script>
+    <script src="~/Content/App/Area/Add.js"></script>
 </head>
 <body>
     <div class="m-content">
-        @using (Ajax.BeginForm("add", "Module", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal" }))
+        @using (Ajax.BeginForm("add", "Area", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal" }))
         {
             <div class="m-form f-cb">
                 <dl class="f-cb s-borderbg">

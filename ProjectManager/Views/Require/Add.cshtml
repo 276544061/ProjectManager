@@ -15,29 +15,9 @@
     <script src="~/Content/umeditor/umeditor.min.js"></script>
     <script src="~/Content/artDialog/jquery.artDialog.js"></script>
     <script src="~/Content/artDialog/plugins/iframeTools.js"></script>
-    <script type="text/javascript">
-        function success(data) {
-            SuccessTip(data.Msg);
-        }
-
-        function create_module() {
-            $.dialog.open('@Url.Action("SimpleAdd","Module")',{title:'添加模块',width:470,height:140});
-        }
-
-        var um = UM.getEditor('container', {
-            initialFrameWidth: 539,
-            initialFrameHeight: 300,
-            toolbar: [
-                'bold italic underline strikethrough | superscript subscript | forecolor backcolor | removeformat |',
-                'insertorderedlist insertunorderedlist',
-                '| justifyleft justifycenter justifyright justifyjustify |',
-                'link unlink ']
-        });
-
-
-    </script>
+    <script src="~/Content/App/Require/Add.js"></script>
 }
-@using (Ajax.BeginForm("add", "project", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "success" }, new { @class = "form-horizontal" }))
+@using (Ajax.BeginForm("add", "project", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal" }))
 {
     <div class="m-form f-cb">
         <dl class="f-cb s-borderbg">
@@ -48,11 +28,12 @@
             <dt><i>*</i>@Html.LabelFor(m => m.AreaName)</dt>
             <dd>
                 @Html.DropDownListFor(m => m.AreaName, null, new { @class = "u-sltl" })
+                <a href="javascript:void(0);" onclick="App.CreateArea()">添加区域</a>
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.ModuleName)</dt>
             <dd>
                 @Html.DropDownListFor(m => m.ModuleName, null, new { @class = "u-sltl" })
-                <a href="javascript:void(0);" onclick=" create_module() ">添加模块</a>
+                <a href="javascript:void(0);" onclick="App.CreateModule()">添加模块</a>
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.Roles)</dt>
             <dd>

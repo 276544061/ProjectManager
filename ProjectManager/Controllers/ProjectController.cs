@@ -86,7 +86,7 @@ namespace ProjectManager.Controllers
             }
             ProjectModel model = ProjectModel.SingleOrDefault(id);
             MyStatus.CurrentProject = model;
-            return Json(result);
+            return Json(result,JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -15,5 +15,6 @@ namespace ProjectManager.Models
         public bool Res { get; set; }
         public string Msg { get; set; }
         public T Data { get; set; }
+        public string Callback { get; set; }
     }
 }

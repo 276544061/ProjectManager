@@ -4,26 +4,6 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@section header
-{
-}
-@section scripts
-{
-    <script type="text/javascript">
-        function delSuccess(data) {
-
-        }
-
-        function changeSuccess(data) {
-            if (data.Res) {
-                alert("操作成功");
-            } else {
-                alert(data.Msg);
-            }
-        }
-
-    </script>
-}
 
 <div class="m-content">
     <table id="dataTable" class="m-table f-cb mart20" border="0">
@@ -39,7 +19,7 @@
                 <td>@item.ID</td>
                 <td>@item.Name</td>
                 <td>@item.Roles</td>
-                <td>@Ajax.ActionLink("使用", "Change", "project", new { id = item.ID }, new AjaxOptions { HttpMethod = "post", OnSuccess = "changeSuccess" }, new { @class = "f-oper" })
+                <td>@Ajax.ActionLink("使用", "Change", "project", new { id = item.ID }, new AjaxOptions { HttpMethod = "post", OnSuccess = "Common.Tips" }, new { @class = "f-oper" })
                     @Html.ActionLink("添加需求", "add", "Require", new { id = item.ID }, new { @class = "f-oper" })
                     @Html.ActionLink("编辑", "edit", "project", new { id = item.ID }, new { @class = "f-oper" })
                     @Html.ActionLink("删除", "delete", "project", new { id = item.ID }, new { @class = "f-oper" })

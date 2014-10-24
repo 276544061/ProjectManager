@@ -103,6 +103,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\MyStatus.cs" />
     <Compile Include="Content\umeditor\net\Uploader.cs" />
+    <Compile Include="Controllers\AreaController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Models\Meta\ProjectModelMeta.cs" />
     <Compile Include="Models\Meta\RequirementModelMeta.cs" />
     <Compile Include="Models\Meta\ModuleModelMeta.cs" />
+    <Compile Include="Models\Meta\AreaModelMeta.cs" />
     <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\ViewModel\ProjectIndexViewModel.cs" />
@@ -126,6 +128,10 @@
     <Compile Include="Service\WordService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\App\Common.js" />
+    <Content Include="Content\App\Module\SimpleAdd.js" />
+    <Content Include="Content\App\Require\Add.js" />
+    <Content Include="Content\App\Area\Add.js" />
     <Content Include="Content\artDialog\artDialog.js" />
     <Content Include="Content\artDialog\artDialog.source.js" />
     <Content Include="Content\artDialog\index.html" />
@@ -530,6 +536,7 @@
     <Content Include="Views\Shared\MenuPartialView.cshtml" />
     <Content Include="Views\Shared\FooterPartialView.cshtml" />
     <Content Include="Views\Module\SimpleAdd.cshtml" />
+    <Content Include="Views\Area\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
