@@ -62,11 +62,15 @@ namespace ProjectManager.Models
             [Display(Name = "需求描述")]
             [Required]
             [StringLength(4000)]
-            [UIHint("RichText")]
             public string Description { get; set; }
 
             [Display(Name = "版本号")]
             public int Version { get; set; }
+
+            [Display(Name = "约束")]
+            [Required]
+            [StringLength(500)]
+            public string Premise { get; set; }
         }
     }
 }

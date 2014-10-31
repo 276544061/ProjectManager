@@ -17,22 +17,25 @@
     <script src="~/Content/artDialog/plugins/iframeTools.js"></script>
     <script src="~/Content/App/Require/Add.js"></script>
 }
-@using (Ajax.BeginForm("add", "project", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal" }))
+@using (Ajax.BeginForm("add", "Require", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal" }))
 {
     <div class="m-form f-cb">
         <dl class="f-cb s-borderbg">
             <dt><i>*</i>@Html.LabelFor(m => m.Name)</dt>
             <dd>
                 @Html.TextBoxFor(m => m.Name, new { @class = "u-iptl" })
+                @Html.ValidationMessageFor(m=>m.Name)
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.AreaName)</dt>
             <dd>
                 @Html.DropDownListFor(m => m.AreaName, null, new { @class = "u-sltl" })
+                 @Html.ValidationMessageFor(m=>m.AreaName)
                 <a href="javascript:void(0);" onclick="App.CreateArea()">添加区域</a>
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.ModuleName)</dt>
             <dd>
                 @Html.DropDownListFor(m => m.ModuleName, null, new { @class = "u-sltl" })
+                 @Html.ValidationMessageFor(m=>m.ModuleName)
                 <a href="javascript:void(0);" onclick="App.CreateModule()">添加模块</a>
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.Roles)</dt>
@@ -43,14 +46,21 @@
                     @item
                 }
             </dd>
+
             <dt><i>*</i>@Html.LabelFor(m => m.DataSource)</dt>
             <dd>
                 @Html.TextBoxFor(m => m.DataSource, new { @class = "u-iptl" })
+                 @Html.ValidationMessageFor(m=>m.DataSource)
+            </dd>
+            <dt><i>*</i>@Html.LabelFor(m => m.Premise)</dt>
+            <dd>
+                @Html.TextBoxFor(m => m.Premise, new { @class = "u-iptl" })
+                 @Html.ValidationMessageFor(m=>m.Premise)
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.Description)</dt>
             <dd>
                 <!-- 加载编辑器的容器 -->
-                <script id="container" name="content" type="text/plain"></script>
+                @Html.TextAreaFor(m=>m.Description)
                 @Html.ValidationMessageFor(m => m.Description)
             </dd>
             <dt></dt>

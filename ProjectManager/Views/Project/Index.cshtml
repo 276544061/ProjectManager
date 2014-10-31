@@ -20,10 +20,10 @@
                 <td>@item.Name</td>
                 <td>@item.Roles</td>
                 <td>@Ajax.ActionLink("使用", "Change", "project", new { id = item.ID }, new AjaxOptions { HttpMethod = "post", OnSuccess = "Common.Tips" }, new { @class = "f-oper" })
+                    @Html.ActionLink("查看需求", "Index", "Require", new { id = item.ID }, new { @class = "f-oper" })
                     @Html.ActionLink("添加需求", "add", "Require", new { id = item.ID }, new { @class = "f-oper" })
                     @Html.ActionLink("编辑", "edit", "project", new { id = item.ID }, new { @class = "f-oper" })
                     @Html.ActionLink("删除", "delete", "project", new { id = item.ID }, new { @class = "f-oper" })
-
                 </td>
             </tr>
         }

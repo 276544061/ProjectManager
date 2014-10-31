@@ -54,9 +54,9 @@ App.LoadAreas = function () {
         }
     });
 }
-App.UM = UM.getEditor('container', {
+App.UM = UM.getEditor('Description', {
     initialFrameWidth: 539,
-    initialFrameHeight: 300,
+    initialFrameHeight: 300, textarea: 'Description',autoSyncData:true ,
     toolbar: [
         'bold italic underline strikethrough | superscript subscript | forecolor backcolor | removeformat |',
         'insertorderedlist insertunorderedlist',

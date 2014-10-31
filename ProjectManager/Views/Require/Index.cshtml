@@ -1,0 +1,32 @@
+﻿@model PetaPoco.Page<RequirementModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="m-content">
+    <table id="dataTable" class="m-table f-cb mart20" border="0">
+        <tr>
+            <th>@Html.LabelFor(m => m.Item.ID)</th>
+            <th>@Html.LabelFor(m => m.Item.Name)</th>
+            <th>@Html.LabelFor(m => m.Item.Roles)</th>
+            <th>@Html.LabelFor(m => m.Item.DataSource)</th>
+            <th>@Html.LabelFor(m => m.Item.Premise)</th>
+            <th>@Html.LabelFor(m => m.Item.Version)</th>
+            <th>操作</th>
+        </tr>
+        @foreach (RequirementModel item in Model.Items)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@(item.AreaName+"-"+item.ModuleName+"-"+item.Name)</td>
+                <td>@item.Roles</td>
+                   <td> @Html.ActionLink("编辑", "edit", "project", new { id = item.ID }, new { @class = "f-oper" })
+                    @Html.ActionLink("删除", "delete", "project", new { id = item.ID }, new { @class = "f-oper" })
+
+                </td>
+            </tr>
+        }
+    </table>
+</div>

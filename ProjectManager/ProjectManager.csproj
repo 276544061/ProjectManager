@@ -102,12 +102,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\MyStatus.cs" />
+    <Compile Include="Common\StringExtender.cs" />
     <Compile Include="Content\umeditor\net\Uploader.cs" />
     <Compile Include="Controllers\AreaController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Controllers\ModuleController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\RequireController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -120,6 +124,7 @@
     <Compile Include="Models\Meta\RequirementModelMeta.cs" />
     <Compile Include="Models\Meta\ModuleModelMeta.cs" />
     <Compile Include="Models\Meta\AreaModelMeta.cs" />
+    <Compile Include="Models\Meta\UserModelMeta.cs" />
     <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\ViewModel\ProjectIndexViewModel.cs" />
@@ -537,6 +542,9 @@
     <Content Include="Views\Shared\FooterPartialView.cshtml" />
     <Content Include="Views\Module\SimpleAdd.cshtml" />
     <Content Include="Views\Area\Add.cshtml" />
+    <Content Include="Views\Require\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\User\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

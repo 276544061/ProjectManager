@@ -176,86 +176,6 @@ namespace ProjectManager.Models
 
 
 
-
-
-		[Column("Need_Constraint")] public string NeedConstraint { get; set; }
-
-
-
-
-
-		[Column] public string Premise { get; set; }
-
-
-
-	}
-
-    
-	[TableName("Pro_Requirements")]
-
-
-	[PrimaryKey("ID")]
-
-
-
-	[ExplicitColumns]
-    public partial class RequirementModel : defaultDB.Record<RequirementModel>  
-    {
-
-
-
-		[Column] public int ID { get; set; }
-
-
-
-
-
-		[Column] public string Name { get; set; }
-
-
-
-
-
-		[Column("Module_Name")] public string ModuleName { get; set; }
-
-
-
-
-
-		[Column("Area_Name")] public string AreaName { get; set; }
-
-
-
-
-
-		[Column] public string Roles { get; set; }
-
-
-
-
-
-		[Column("Data_Source")] public string DataSource { get; set; }
-
-
-
-
-
-		[Column] public int Version { get; set; }
-
-
-
-
-
-		[Column] public string Description { get; set; }
-
-
-
-
-
-		[Column("Project_ID")] public int ProjectID { get; set; }
-
-
-
 	}
 
     
@@ -493,6 +413,80 @@ namespace ProjectManager.Models
 
 
 		[Column] public string Position { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Requirements")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class RequirementModel : defaultDB.Record<RequirementModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column("Module_Name")] public string ModuleName { get; set; }
+
+
+
+
+
+		[Column("Area_Name")] public string AreaName { get; set; }
+
+
+
+
+
+		[Column] public string Roles { get; set; }
+
+
+
+
+
+		[Column("Data_Source")] public string DataSource { get; set; }
+
+
+
+
+
+		[Column] public int Version { get; set; }
+
+
+
+
+
+		[Column] public string Description { get; set; }
+
+
+
+
+
+		[Column("Project_ID")] public int ProjectID { get; set; }
+
+
+
+
+
+		[Column] public string Premise { get; set; }
 
 
 
