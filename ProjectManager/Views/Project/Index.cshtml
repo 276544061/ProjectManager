@@ -6,7 +6,8 @@
 }
 
 <div class="m-content">
-    <table id="dataTable" class="m-table f-cb mart20" border="0">
+    <div class="con">
+    <table class="m-table f-cb mart20">
         <tr>
             <th>@Html.LabelFor(m => m.ProjectList.Item.ID)</th>
             <th>@Html.LabelFor(m => m.ProjectList.Item.Name)</th>
@@ -29,41 +30,4 @@
         }
     </table>
 </div>
-@*<div class="page-content">
-    <div class="container-fluid">
-        <!-- 页面内容开始-->
-        <div class="row-fluid">
-            <div class="span12">
-                <div class="portlet-body flip-scroll">
-                    <table class="table-bordered table-striped table-condensed flip-content">
-                        <thead class="flip-content">
-                            <tr>
-                                <th>@Html.LabelFor(m => m.ProjectList.Item.ID)</th>
-                                <th>@Html.LabelFor(m => m.ProjectList.Item.Name)</th>
-                                <th>@Html.LabelFor(m => m.ProjectList.Item.Roles)</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (ProjectModel item in Model.ProjectList.Items)
-                            {
-                                <tr>
-                                    <td>@item.ID</td>
-                                    <td>@item.Name</td>
-                                    <td>@item.Roles</td>
-                                    <td>@Ajax.ActionLink("使用", "Change", "project", new { id = item.ID }, new AjaxOptions { HttpMethod = "post", OnSuccess = "changeSuccess" }, new { @class = "" })
-                                        @Html.ActionLink("添加需求", "add", "Require", new { id = item.ID }, new { @class = "" })
-                                        @Html.ActionLink("编辑", "edit", "project", new { id = item.ID }, new { @class = "" })
-                                        @Html.ActionLink("删除", "delete", "project", new { id = item.ID }, new { @class = "" })
-
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
     </div>
-</div>*@
-

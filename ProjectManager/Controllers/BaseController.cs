@@ -15,7 +15,10 @@ namespace ProjectManager.Controllers
             {
                 foreach (var error in item.Value.Errors)
                 {
-                    msg.AppendFormat("<p>{0}</p>", error.ErrorMessage);
+                    if (!string.IsNullOrEmpty(error.ErrorMessage))
+                    {
+                        msg.AppendFormat("<p>{0}</p>", error.ErrorMessage);
+                    }
                 }
             }
             return msg.ToString();

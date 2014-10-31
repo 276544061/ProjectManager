@@ -130,6 +130,7 @@
     <Compile Include="Models\ViewModel\ProjectIndexViewModel.cs" />
     <Compile Include="Models\ViewModel\RequireAddViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AttrService.cs" />
     <Compile Include="Service\WordService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +138,7 @@
     <Content Include="Content\App\Module\SimpleAdd.js" />
     <Content Include="Content\App\Require\Add.js" />
     <Content Include="Content\App\Area\Add.js" />
+    <Content Include="Content\App\User\Add.js" />
     <Content Include="Content\artDialog\artDialog.js" />
     <Content Include="Content\artDialog\artDialog.source.js" />
     <Content Include="Content\artDialog\index.html" />

@@ -24,20 +24,21 @@
                 <div class="m-login">
                     <h3>您好，请登录</h3>
                     <p class="z-err">@ViewBag.Error</p>
-                    <dl class="f-cb">
-                        @Html.BeginForm("Index","login",FormMethod.Post){
+                    <form action="@Url.Action("Index", "Login")" method="post">
+                        <dl class="f-cb">
                             <dt>登录名：</dt>
                             <dd>
-                                <input type="text" class="u-ipt" name="code"/></dd>
+                                <input type="text" class="u-ipt" name="code" /></dd>
                             <dt>密码：</dt>
                             <dd>
-                                <input type="text" class="u-ipt" name="pwd"/>
+                                <input type="text" class="u-ipt" name="pwd" />
                             </dd>
                             <dt></dt>
                             <dd class="mart15">
                                 <input type="submit" value="登录" class="u-btn" /></dd>
-                        }
-                    </dl>
+
+                        </dl>
+                    </form>
                 </div>
             </div>
         </div>

@@ -13,8 +13,6 @@
 {
     <script src="~/Content/umeditor/umeditor.config.js"></script>
     <script src="~/Content/umeditor/umeditor.min.js"></script>
-    <script src="~/Content/artDialog/jquery.artDialog.js"></script>
-    <script src="~/Content/artDialog/plugins/iframeTools.js"></script>
     <script src="~/Content/App/Require/Add.js"></script>
 }
 @using (Ajax.BeginForm("add", "Require", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal" }))

@@ -10,12 +10,12 @@ namespace ProjectManager.Controllers
 {
     public class LoginController : Controller
     {
-
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
-
+        [HttpPost]
         public ActionResult Index(string code, string pwd)
         {
             UserModel user = UserModel.SingleOrDefault("where code=@0", code);
@@ -31,7 +31,7 @@ namespace ProjectManager.Controllers
                 return View();
             }
             MyStatus.CurrentUser = user;
-            return View();
+            return RedirectToAction("Index","Project");
         }
     }
 }

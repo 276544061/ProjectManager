@@ -13,12 +13,18 @@ namespace ProjectManager.Models
             public int ID { get; set; }
 
             [Display(Name = "姓名")]
+            [Required]
+            [StringLength(20)]
             public string Name { get; set; }
 
             [Display(Name = "帐号")]
+            [Required]
+            [StringLength(20)]
+            [RegularExpression(@"^[a-zA-Z]+[a-zA-Z\d_]{4,18}",ErrorMessage = "帐号格式错误")]
             public string Code { get; set; }
 
             [Display(Name = "密码")]
+            [Required]
             public string Pwd { get; set; }
 
             [Display(Name = "邮箱")]

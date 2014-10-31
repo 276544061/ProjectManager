@@ -339,86 +339,6 @@ namespace ProjectManager.Models
 	}
 
     
-	[TableName("Sys_User")]
-
-
-	[PrimaryKey("ID")]
-
-
-
-	[ExplicitColumns]
-    public partial class UserModel : defaultDB.Record<UserModel>  
-    {
-
-
-
-		[Column] public int ID { get; set; }
-
-
-
-
-
-		[Column] public string Name { get; set; }
-
-
-
-
-
-		[Column] public string Code { get; set; }
-
-
-
-
-
-		[Column] public string Pwd { get; set; }
-
-
-
-
-
-		[Column] public int Salt { get; set; }
-
-
-
-
-
-		[Column] public string Email { get; set; }
-
-
-
-
-
-		[Column] public int Phone { get; set; }
-
-
-
-
-
-		[Column] public int QQ { get; set; }
-
-
-
-
-
-		[Column("Del_Flag")] public int DelFlag { get; set; }
-
-
-
-
-
-		[Column] public string Job { get; set; }
-
-
-
-
-
-		[Column] public string Position { get; set; }
-
-
-
-	}
-
-    
 	[TableName("Pro_Requirements")]
 
 
@@ -487,6 +407,124 @@ namespace ProjectManager.Models
 
 
 		[Column] public string Premise { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Attr")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class AttrModel : defaultDB.Record<AttrModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column] public string Type { get; set; }
+
+
+
+
+
+		[Column] public int? Sort { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Sys_User")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class UserModel : defaultDB.Record<UserModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column] public string Code { get; set; }
+
+
+
+
+
+		[Column] public string Pwd { get; set; }
+
+
+
+
+
+		[Column] public int Salt { get; set; }
+
+
+
+
+
+		[Column] public string Email { get; set; }
+
+
+
+
+
+		[Column] public string Phone { get; set; }
+
+
+
+
+
+		[Column] public int QQ { get; set; }
+
+
+
+
+
+		[Column("Del_Flag")] public int DelFlag { get; set; }
+
+
+
+
+
+		[Column] public string Job { get; set; }
+
+
+
+
+
+		[Column] public string Position { get; set; }
 
 
 

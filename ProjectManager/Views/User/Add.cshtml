@@ -4,6 +4,11 @@
     ViewBag.Title = "添加用户";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section scripts
+{
+    <script src="~/Content/App/User/Add.js"></script>
+}
+
 @using (Ajax.BeginForm("add", "User", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal" }))
 {
     <div class="m-form f-cb">
@@ -15,17 +20,22 @@
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.Code)</dt>
             <dd>
-                @Html.DropDownListFor(m => m.Code, null, new { @class = "u-sltl" })
+                @Html.TextBoxFor(m => m.Code, null, new { @class = "u-iptl" })
                 @Html.ValidationMessageFor(m => m.Code)
+            </dd>
+            <dt><i>*</i>@Html.LabelFor(m => m.Pwd)</dt>
+            <dd>
+                @Html.TextBoxFor(m => m.Pwd, null, new { @class = "u-iptl" })
+                @Html.ValidationMessageFor(m => m.Pwd)
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.Email)</dt>
             <dd>
-                @Html.DropDownListFor(m => m.Email, null, new { @class = "u-sltl" })
+                @Html.TextBoxFor(m => m.Email, null, new { @class = "u-iptl" })
                 @Html.ValidationMessageFor(m => m.Email)
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.Phone)</dt>
             <dd>
-                @Html.DropDownListFor(m => m.Phone, null, new { @class = "u-sltl" })
+                @Html.TextBoxFor(m => m.Phone, null, new { @class = "u-iptl" })
                 @Html.ValidationMessageFor(m => m.Phone)
             </dd>
 
@@ -36,13 +46,12 @@
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.Job)</dt>
             <dd>
-                @Html.TextBoxFor(m => m.Job, new { @class = "u-iptl" })
+                @Html.DropDownListFor(m => m.Job, null, new { @class = "u-sltl" })
                 @Html.ValidationMessageFor(m => m.Job)
             </dd>
             <dt><i>*</i>@Html.LabelFor(m => m.Position)</dt>
             <dd>
-                <!-- 加载编辑器的容器 -->
-                @Html.TextBoxFor(m => m.Position)
+                @Html.DropDownListFor(m => m.Position, null, new { @class = "u-sltl" })
                 @Html.ValidationMessageFor(m => m.Position)
             </dd>
             <dt></dt>
