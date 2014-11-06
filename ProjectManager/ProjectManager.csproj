@@ -134,6 +134,7 @@
     <Compile Include="Models\ViewModel\RequireAddViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\AttrService.cs" />
+    <Compile Include="Service\NodeService.cs" />
     <Compile Include="Service\WordService.cs" />
   </ItemGroup>
   <ItemGroup>

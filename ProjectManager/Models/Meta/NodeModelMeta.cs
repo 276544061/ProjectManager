@@ -28,11 +28,9 @@ namespace ProjectManager.Models
             public string Name { get; set; }
 
             [Display(Name = "上级节点")]
-            [Required]
             public int Pid { get; set; }
 
             [Display(Name = "链接")]
-            [Required]
             [StringLength(100)]
             public string Link { get; set; }
 

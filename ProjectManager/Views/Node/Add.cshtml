@@ -7,10 +7,15 @@
 @section scripts
 {
     <script src="~/Content/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+    <link href="~/Content/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    <script src="~/Content/App/Node/Add.js"></script>
 }
-<div class="m-tree"></div>
+<div class="m-tree">
+    <ul class="ztree" id="ztree">
+    </ul>
+</div>
 <div class="m-treeR">
-    @using (Ajax.BeginForm("add", "Node", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal" }))
+    @using (Ajax.BeginForm("add", "Node", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal",id="form1" }))
     {
         <div class="m-form f-cb">
             <dl class="f-cb s-borderbg">
@@ -23,6 +28,7 @@
                 <dd>
                     @Html.DropDownListFor(m => m.GroupID, null, new { @class = "u-sltl" })
                     @Html.ValidationMessageFor(m => m.GroupID)
+                    @Html.HiddenFor(m => m.Pid)
                 </dd>
                 <dt><i>*</i>@Html.LabelFor(m => m.Link)</dt>
                 <dd>

@@ -595,63 +595,7 @@ namespace ProjectManager.Models
 	}
 
     
-	[TableName("Pro_Node")]
-
-
-	[PrimaryKey("ID")]
-
-
-
-	[ExplicitColumns]
-    public partial class NodeModel : defaultDB.Record<NodeModel>  
-    {
-
-
-
-		[Column] public int ID { get; set; }
-
-
-
-
-
-		[Column] public string Name { get; set; }
-
-
-
-
-
-		[Column] public int Pid { get; set; }
-
-
-
-
-
-		[Column("Node_Level")] public int NodeLevel { get; set; }
-
-
-
-
-
-		[Column] public string Link { get; set; }
-
-
-
-
-
-		[Column("Group_ID")] public int GroupID { get; set; }
-
-
-
-
-
-		[Column] public int SortNo { get; set; }
-
-
-
-	}
-
-    
-	[TableName("Sys_Group")]
+	[TableName("Pro_Group")]
 
 
 	[PrimaryKey("ID")]
@@ -709,6 +653,62 @@ namespace ProjectManager.Models
 
 
 		[Column("Node_ID")] public int NodeID { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Node")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class NodeModel : defaultDB.Record<NodeModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column] public int Pid { get; set; }
+
+
+
+
+
+		[Column("Node_Level")] public int NodeLevel { get; set; }
+
+
+
+
+
+		[Column] public string Link { get; set; }
+
+
+
+
+
+		[Column("Group_ID")] public int GroupID { get; set; }
+
+
+
+
+
+		[Column] public int SortNo { get; set; }
 
 
 
