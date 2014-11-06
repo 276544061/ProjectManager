@@ -1,0 +1,1457 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>资源库</title>
+<link href="../../Style/common.css" rel="stylesheet" type="text/css" />
+<link href="../../Style/backstage.css" rel="stylesheet" type="text/css" />
+<link href="../../JScript/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+<script src="../../JScript/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+<script src="../../JScript/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="../../JScript/nav.js" type="text/javascript"></script>
+<script src="../../JScript/zTree/js/jquery.ztree.all-3.1.min.js" type="text/javascript"></script>
+<script src="../../JScript/mainTab.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		tabs('.con','tags','.tagContentCon');
+	});
+</script>
+
+<!--[if IE 6]>
+<script type="text/javascript" src="../../JScript/Png.js"></script>
+<![endif]-->
+</head>
+<body>
+<!-- top导航 -->
+<div class="g-nav f-cb">
+  <div class="m-nav"><i><a>【退出】</a></i><i>您好，欢迎您登录</i></div>
+</div>
+<!-- /top导航 --> 
+<!-- 头部 -->
+<div class="g-hd">
+  <div class="m-hd f-cb">
+    <div class="m-logo"><a href=""><img src="../../Style/Images/bsLogo.png" alt="资源库" /></a><i>录入平台</i></div>
+    <div class="m-menu">
+      <ul>
+        <li class="z-crt"><a>系统管理</a></li>
+        <li><a>权限管理</a></li>
+        <li><a>资源管理</a></li>
+        <li><a>用户管理</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- /头部 --> 
+<!-- 主体 -->
+<div class="g-bd f-cb">
+  <div class="m-main"> 
+    <!-- 左侧 -->
+    <div class="g-sd"> 
+      <!-- 左侧菜单 -->
+      <div class="m-sd"> 
+        <!-- 个人信息
+        <div class="f-cb psinfo">
+          <div class="hdimg"> <a><img src="../../Style/Images/psHd.jpg" /></a> </div>
+          <div class="infodeta">
+            <p>姓名：张三</p>
+            <p>职位：编辑</p>
+          </div>
+        </div>
+         /个人信息 --> 
+        <!-- 个人信息 -->
+        <div class="f-cb psinfo">
+        	<div class="m-content2 f-cb">
+          <div class="hdimg"> <a><img src="../../Style/Images/psHd.jpg" /></a> </div>
+          <div class="infodeta">
+            <p>王赫群</p>
+            <p>管理员</p>
+          </div>
+          </div>
+          <div class="m-content mart15 f-cb">
+          	<a><i class="ico-set marr5"></i>系统设置</a><a class="marl30"><i class="ico-exit marr5"></i>退出</a>
+          </div>
+        </div>
+        <!-- /个人信息 --> 
+         
+        <!-- 菜单 -->
+        <div class="f-cb sdnav">
+          <ul>
+            <li> <a class="fst z-crt"><span>属性标注</span><i></i></a>
+              <ul class="scd z-crt">
+                <li><a class="z-crt"><i></i>模板管理</a></li>
+                <li><a><i></i>属性完善</a></li>
+              </ul>
+            </li>
+            <li> <a class="fst"><span>资源管理</span><i></i></a>
+              <ul class="scd">
+                <li><a><i></i>模板管理</a></li>
+                <li><a><i></i>属性完善</a></li>
+              </ul>
+            </li>
+            <li> <a class="fst"><span>工作跟踪</span><i></i></a>
+              <ul class="scd">
+                <li><a><i></i>模板管理</a></li>
+                <li><a><i></i>属性完善</a></li>
+              </ul>
+            </li>
+            <li> <a class="fst"><span>用户管理</span><i></i></a>
+              <ul class="scd">
+                <li><a><i></i>模板管理</a></li>
+                <li><a><i></i>属性完善</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /菜单 --> 
+      </div>
+      <!-- /左侧菜单 --> 
+    </div>
+    <!-- /左侧 --> 
+    <!-- 主体内容 -->
+    <div class="g-mn">
+      <div class="g-mnc f-cb"> 
+        <!-- 路径标题 -->
+        <div class="m-tt"><a href="#">缓存管理</a> &gt; 缓存列表</div>
+        <!-- /路径标题 --> 
+        <!-- 搜索 -->
+        <div class="m-search mart20 f-cb">
+          <div class="m-srht f-cb"><a class="z-crt">全部</a><a>语文</a><a>数学</a><a>英语</a><a>物理</a><a>化学</a><a>政治</a><a>历史</a><a class="last-child">生物</a></div>
+          <div class="m-schlist f-cb">
+            <div class="searchU">
+              <div class="searchUP">人员：</div>
+              <div class="searchUP">
+                <select class="u-sltm">
+                  <option>全部</option>
+                </select>
+              </div>
+            </div>
+            <div class="searchU">
+              <div class="searchUP">标题：</div>
+              <div class="searchUP">
+                <input name="" type="text" class="u-iptm" />
+              </div>
+            </div>
+            <div class="searchU">
+              <div class="searchUP">上传时间：</div>
+              <div class="searchUP">
+                <input name="" class="Wdate u-iptm" type="text" value="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})"/>
+              </div>
+              <div class="searchUP">&nbsp;-&nbsp;</div>
+              <div class="searchUP">
+                <input name="" class="Wdate u-iptm" type="text" value="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm'})"/>
+              </div>
+            </div>
+            <div class="searchU">
+              <input name="" type="button" class="u-btnblue marl10" value="搜索" />
+            </div>
+          </div>
+        </div>
+        <!-- /搜索 --> 
+        <!-- 操作按钮 -->
+        <div class="m-content">
+          <input name="" type="button" class="u-btn" value="创建" />
+          <input name="" type="button" class="u-btn" value="修改" />
+          <input name="" type="button" class="u-btn" value="删除" />
+        </div>
+        <!-- /操作按钮 --> 
+        <!-- tab -->
+        <div class="m-content">
+          <div class="con">
+            <ul class="tags f-cb">
+              <li class="selectTag"><a href="javascript:void(0)">讲义</a> </li>
+              <li><a href="javascript:void(0)">测试</a> </li>
+            </ul>
+            <div class="tagContent f-cb">
+              <div class="tagContentCon selectTag">
+                <div class="m-form3 f-cb">
+                  <dl class="f-cb">
+                    <dt>讲义说明：</dt>
+                    <dd>讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明讲义说明</dd>
+                  </dl>
+                </div>
+                <table class="m-table f-cb mart10" border="0">
+                  <caption><label class="f-fl"><span>总视频数：36个</span><span class="marl10">总评论数：36个</span><span class="marl10">总播放数：36个</span></label><label class="f-fr"><a class="ico-costop z-crt"><i></i>播放数</a><a class="marl10 ico-cosnext"><i></i>评论数</a></label></caption>
+                  <tr>
+                    <th class="f-width30"><input type="checkbox" /></th>
+                    <th class="f-width50">序号</th>
+                    <th>模板标题</th>
+                    <th class="f-width80">创建者</th>
+                    <th class="f-width120">创建时间</th>
+                    <th class="f-width200">操作</th>
+                  </tr>
+                  <tr class="z-crt">
+                    <td><input type="checkbox" /></td>
+                    <td>1</td>
+                    <td><i class="ico-doc marr5"></i>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper filterGray"><i class="ico-edit"></i>编辑</a><a class="f-oper"><i class="ico-del"></i>删除</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>2</td>
+                    <td><i class="ico-vdo marr5"></i><a class="f-tdu">模版模版模版模版模版模版模版模版</a></td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-download"></i>下载</a><a class="f-oper"><i class="ico-pwdreset"></i>密码重置</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>3</td>
+                    <td><i class="ico-ado marr5"></i>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-startuse"></i>启用</a><a class="f-oper"><i class="ico-stopuse"></i>停用</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版<i class="ico-userfst" title="一级发布者"></i><i class="ico-userscd" title="二级发布者"></i></td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-addbakls"></i>加入黑名单</a><a class="f-oper"><i class="ico-delbakls"></i>移除黑名单</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td><a>模版模版模版模版模版模版模版模版模版</a><i class="ico-usercus" title="平台客服"></i><i class="ico-userbus" title="企业用户"></i></td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-reply"></i>回复</a><a class="f-oper"><i class="ico-remove"></i>移除</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版模版<i class="ico-userstop" title="账号停用"></i><i class="ico-userblk" title="黑名单"></i></td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-check"></i>审核</a><a class="f-oper"><i class="ico-recheck"></i>重新审核</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-character"></i>角色</a><a class="f-oper"><i class="ico-upsevs"></i>上架</a><a class="f-oper"><i class="ico-offsevs"></i>下架</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-shield"></i>屏蔽</a><a class="f-oper"><i class="ico-cneshield"></i>取消屏蔽</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-details"></i>详情</a></td>
+                  </tr>
+                </table>
+                <table class="m-table06 f-cb mart10" border="0">
+                  <tr>
+                    <th class="f-width30"><input type="checkbox" /></th>
+                    <th class="f-width50">序号</th>
+                    <th>模板标题</th>
+                    <th class="f-width80">创建者</th>
+                    <th class="f-width120">创建时间</th>
+                    <th class="f-width200">操作</th>
+                  </tr>
+                  <tr class="z-crt">
+                    <td><input type="checkbox" /></td>
+                    <td>1</td>
+                    <td><i class="ico-doc marr5"></i>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper filterGray"><i class="ico-edit"></i>编辑</a><a class="f-oper"><i class="ico-del"></i>删除</a></td>
+                  </tr>
+                  <tr class="tablebg">
+                    <td><input type="checkbox" /></td>
+                    <td>2</td>
+                    <td><i class="ico-vdo marr5"></i><a class="f-tdu">模版模版模版模版模版模版模版模版</a></td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-download"></i>下载</a><a class="f-oper"><i class="ico-pwdreset"></i>密码重置</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>3</td>
+                    <td><i class="ico-ado marr5"></i>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-startuse"></i>启用</a><a class="f-oper"><i class="ico-stopuse"></i>停用</a></td>
+                  </tr>
+                  <tr class="tablebg">
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版<i class="ico-userfst" title="一级发布者"></i><i class="ico-userscd" title="二级发布者"></i></td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-addbakls"></i>加入黑名单</a><a class="f-oper"><i class="ico-delbakls"></i>移除黑名单</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td><a>模版模版模版模版模版模版模版模版模版</a><i class="ico-usercus" title="平台客服"></i><i class="ico-userbus" title="企业用户"></i></td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-reply"></i>回复</a><a class="f-oper"><i class="ico-remove"></i>移除</a></td>
+                  </tr>
+                  <tr class="tablebg">
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版模版<i class="ico-userstop" title="账号停用"></i><i class="ico-userblk" title="黑名单"></i></td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-check"></i>审核</a><a class="f-oper"><i class="ico-recheck"></i>重新审核</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-character"></i>角色</a><a class="f-oper"><i class="ico-upsevs"></i>上架</a><a class="f-oper"><i class="ico-offsevs"></i>下架</a></td>
+                  </tr>
+                  <tr class="tablebg">
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-shield"></i>屏蔽</a><a class="f-oper"><i class="ico-cneshield"></i>取消屏蔽</a></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>4</td>
+                    <td>模版模版模版模版模版模版模版模版</td>
+                    <td>刘涛</td>
+                    <td>2013-09-05</td>
+                    <td><a class="f-oper"><i class="ico-details"></i>详情</a></td>
+                  </tr>
+                </table>
+                <div class="m-form3 f-cb mart20">
+                  <dl class="f-cb">
+                    <dt>审批原因：</dt>
+                    <dd>
+                      <textarea class="u-taal"></textarea>
+                    </dd>
+                    <dt></dt>
+                    <dd>
+                      <input type="button" class="u-btnblue" value="通过">
+                      <input type="button" class="u-btnred marl10" value="驳回" />
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="tagContentCon"> 2 </div>
+              <div class="tagContentCon"> 3 </div>
+            </div>
+          </div>
+        </div>
+        <!-- /tab --> 
+        <!-- 表格 -->
+        <div class="m-content">
+          <table class="m-table f-cb mart20" border="0">
+            <caption><label class="f-fl"><span>总视频数：36个</span><span class="marl10">总评论数：36个</span><span class="marl10">总播放数：36个</span></label><label class="f-fr"><a class="ico-costop z-crt"><i></i>播放数</a><a class="marl10 ico-cosnext"><i></i>评论数</a></label></caption>
+            <tr>
+              <th class="f-width30"><input type="checkbox" /></th>
+              <th class="f-width50">序号</th>
+              <th>模板标题</th>
+              <th class="f-width80">创建者</th>
+              <th class="f-width120">创建时间</th>
+              <th class="f-width200">操作</th>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>1</td>
+              <td>模版模版模版模版模版模版模版模版</td>
+              <td>刘涛</td>
+              <td>2013-09-05</td>
+              <td><a class="f-oper filterGray"><i class="ico-edit"></i>编辑</a><a class="f-oper"><i class="ico-del"></i>删除</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>2</td>
+              <td><a class="f-tdu">模版模版模版模版模版模版模版模版</a></td>
+              <td>刘涛</td>
+              <td>2013-09-05</td>
+              <td><a class="f-oper"><i class="ico-download"></i>下载</a><a class="f-oper"><i class="ico-pwdreset"></i>密码重置</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>3</td>
+              <td>模版模版模版模版模版模版模版模版</td>
+              <td>刘涛</td>
+              <td>2013-09-05</td>
+              <td><a class="f-oper"><i class="ico-startuse"></i>启用</a><a class="f-oper"><i class="ico-stopuse"></i>停用</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>4</td>
+              <td>模版模版模版模版模版模版模版模版</td>
+              <td>刘涛</td>
+              <td>2013-09-05</td>
+              <td><a class="f-oper"><i class="ico-addbakls"></i>加入黑名单</a><a class="f-oper"><i class="ico-delbakls"></i>移除黑名单</a></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>4</td>
+              <td>模版模版模版模版模版模版模版模版</td>
+              <td>刘涛</td>
+              <td>2013-09-05</td>
+              <td><a class="f-oper"><i class="ico-reply"></i>回复</a></td>
+            </tr>
+          </table>
+          <!-- 分页 -->
+          <div class="m-page m-page-sr m-page-sm"> <a href="#" class="first pageprv z-dis"><span class="pagearr">&lt;</span>上一页</a> <a href="#">1</a> <a href="#" class="z-crt">2</a> <a href="#">3</a> <a href="#">4</a> <i>...</i> <a href="#">10</a> <a href="#" class="last pagenxt">下一页<span class="pagearr">&gt;</span></a> </div>
+          <!-- /分页 --> 
+        </div>
+        <!-- /表格 --> 
+        <!-- 表格 -->
+        <div class="m-content">
+          <table class="m-table02 f-cb mart20" border="0">
+            <tr>
+              <th class="f-width100"> <div class="out"> <b>年级</b> <em>科目</em> </div>
+              </th>
+              <th>七年级</th>
+              <th>八年级</th>
+              <th>九年级</th>
+            </tr>
+            <tr>
+              <th class="color">语文</th>
+              <td>80/90</td>
+              <td>90</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <th class="color">数学</th>
+              <td>80</td>
+              <td>90</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <th class="color">英语</th>
+              <td>80</td>
+              <td>90</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <th class="color">物理</th>
+              <td>80</td>
+              <td>90</td>
+              <td>100</td>
+            </tr>
+          </table>
+          <!-- 分页 -->
+          <div class="m-page m-page-sr m-page-sm"> <a href="#" class="first pageprv z-dis"><span class="pagearr">&lt;</span>上一页</a> <a href="#">1</a> <a href="#" class="z-crt">2</a> <a href="#">3</a> <a href="#">4</a> <i>...</i> <a href="#">10</a> <a href="#" class="last pagenxt">下一页<span class="pagearr">&gt;</span></a> </div>
+          <!-- /分页 --> 
+        </div>
+        <!-- /表格 --> 
+        <!-- form 4列 -->
+        <div class="m-content f-width1000">
+          <div class="m-content"> 
+            <!-- 左侧 -->
+            <div class="f-fl f-width50p">
+              <div class="m-form2 f-cb">
+                <dl class="f-cb">
+                  <dt>真实姓名：</dt>
+                  <dd>李木子</dd>
+                  <dt>性别：</dt>
+                  <dd>男</dd>
+                  <dt>职称：</dt>
+                  <dd>教师</dd>
+                  <dt>联系电话：</dt>
+                  <dd>18666668888</dd>
+                  <dt>学段：</dt>
+                  <dd>高中</dd>
+                </dl>
+              </div>
+            </div>
+            <!-- /左侧 --> 
+            <!-- 右侧 -->
+            <div class="f-fl f-width50p">
+              <div class="m-form2 f-cb">
+                <dl class="f-cb">
+                  <dt>头像：</dt>
+                  <dd><img src="../../Style/Images/psHd.jpg" width="70" height="67" /></dd>
+                  <dt>邮箱：</dt>
+                  <dd>limuzi@126.com</dd>
+                  <dt>主修学科：</dt>
+                  <dd>语文</dd>
+                </dl>
+              </div>
+            </div>
+            <!-- /右侧 --> 
+          </div>
+          <!-- form -->
+          <div class="m-content">
+            <div class="m-form2 f-cb">
+              <dl class="f-cb">
+                <dt>所属学校：</dt>
+                <dd>山东省青岛市第二中学</dd>
+                <dt>风格：</dt>
+                <dd>
+                  <div class="m-selfavcon f-cb">
+                    <ul>
+                      <li><span>K歌之王</span></li>
+                      <li><span>风趣</span></li>
+                      <li><span>风趣</span></li>
+                      <li><span>幽默风趣风趣</span></li>
+                      <li><span>幽默幽默</span></li>
+                      <li><span>风趣</span></li>
+                      <li><span>幽默</span></li>
+                      <li><span>风趣</span></li>
+                      <li><span>风趣风趣</span></li>
+                      <li><span>幽默风趣</span></li>
+                      <li><span>风趣</span></li>
+                      <li><span>幽默</span></li>
+                      <li><span>风趣</span></li>
+                    </ul>
+                  </div>
+                </dd>
+                <dt>个人简介（资质）：</dt>
+                <dd>个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介个人简介</dd>
+                <dt>审批原因：</dt>
+                <dd>
+                  <textarea class="u-taal"></textarea>
+                </dd>
+                <dt></dt>
+                <dd>
+                  <input type="button" class="u-btnblue" value="通过">
+                  <input type="button" class="u-btnred marl10" value="驳回" />
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <!-- /form --> 
+        </div>
+        <!-- /form 4列 --> 
+        <!-- form -->
+        <div class="m-content">        
+        <div class="m-tit">园区</div>
+          <div class="m-form f-cb">
+            <dl class="f-cb s-borderbg">
+              <dt><i>*</i>类型：</dt>
+              <dd>
+                <label>
+                  <input type="radio" />
+                  单选</label>
+                <input type="radio" />
+                <label> 多选</label>
+                <label>
+                  <input type="checkbox" />
+                  复选框</label>
+              </dd>
+              <dt>选择模版：</dt>
+              <dd>
+                <input name="" type="text" class="u-iptl" />
+                <input name="" type="button" class="u-btn marl10" value="上传" />
+                <p>文件名字XXXXXXXXX.doc</p>
+                <p class="z-err">上传出错</p>
+              </dd>
+              <dt>学科：</dt>
+              <dd>
+                <select class="u-slts">
+                  <option>全部</option>
+                </select>
+              </dd>
+              <dt>学科：</dt>
+              <dd>
+                <select class="u-sltm">
+                  <option>全部</option>
+                </select>
+              </dd>
+              <dt>学科：</dt>
+              <dd>
+                <select class="u-sltl">
+                  <option>全部</option>
+                </select>
+              </dd>
+              <dt>选项1：</dt>
+              <dd>
+                <input name="" type="text" class="u-ipts" />
+              </dd>
+              <dt>选项2：</dt>
+              <dd>
+                <input name="" type="text" class="u-iptm" />
+              </dd>
+              <dt>选项2：</dt>
+              <dd>
+                <input name="" type="text" class="u-iptl" />
+                <label class="f-fs12">
+                  <input type="checkbox" />
+                  同步修改文件名</label>
+              </dd>
+              <dt>内容提供者</dt>
+              <dd> </dd>
+              <dt></dt>
+              <dd> <span class="marr5">姓名：</span>
+                <input name="" type="text" class="u-ipts" />
+              </dd>
+              <dt></dt>
+              <dd> <span class="marr5 f-vat">单位：</span>
+                <textarea class="u-taal"></textarea>
+              </dd>
+              <dt>标识码：</dt>
+              <dd>MT201309061234</dd>
+              <dt>题目：</dt>
+              <dd>
+                <textarea class="u-taas"></textarea>
+                <p class="z-err">填写错误</p>
+              </dd>
+              <dt>题目：</dt>
+              <dd>
+                <textarea class="u-taal"></textarea>
+                <p class="z-err">填写错误</p>
+              </dd>
+              <dt>选项2：</dt>
+              <dd>
+                <input name="" type="text" class="u-iptl" />
+              </dd>
+              <dt>图片：</dt>
+              <dd>
+                <input type="file" class="u-file" />
+              </dd>
+              <dt>标签：</dt>
+              <dd>
+                <div class="m-recfavcon f-cb">
+                  <ul>
+                    <li><a class="z-crt">K歌之王</a></li>
+                    <li><a>风趣</a></li>
+                    <li><a>风趣</a></li>
+                    <li><a>幽默风趣风趣</a></li>
+                    <li><a>幽默幽默</a></li>
+                    <li><a>风趣</a></li>
+                    <li><a>幽默</a></li>
+                    <li><a>风趣</a></li>
+                    <li><a>风趣风趣</a></li>
+                    <li><a>幽默风趣</a></li>
+                    <li><a>风趣</a></li>
+                    <li><a>幽默</a></li>
+                    <li><a>风趣</a></li>
+                  </ul>
+                </div>
+              </dd>
+              <dt></dt>
+              <dd>
+                <input type="button" class="u-btnblue" value="保存">
+                <input type="button" class="u-btnblue marl10" value="取消" />
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <!-- /form --> 
+        <!-- 分隔线 -->
+        <div class="m-content">
+          <div class="f-line"></div>
+        </div>
+        <!-- /分隔线 --> 
+        <!-- form  详情页-->
+        <div class="m-content">
+          <div class="m-form f-cb">
+            <dl class="f-cb">
+              <dt>总录入数量：</dt>
+              <dd><span>430</span></dd>
+              <dt>当日工作时间：</dt>
+              <dd><span>150分钟</span></dd>
+              <dt>当日录入数量：</dt>
+              <dd><span>10</span><span class="marl20">文本：3</span><span class="marl20">音频：3</span><span class="marl20">视频：2</span><span class="marl20">动画：2</span></dd>
+              <dt>错误修正数：</dt>
+              <dd><span>0</span></dd>
+              <dt>本周工作数量：</dt>
+              <dd><span>20</span></dd>
+              <dt>本月工作数量：</dt>
+              <dd><span>100</span></dd>
+              <dt></dt>
+              <dd>
+                <input type="button" class="u-btnblue" value="返回">
+              </dd>
+            </dl>
+          </div>
+        </div>
+        <!-- /详情页 --> 
+        <!-- 树状 -->
+        <div class="m-content">
+          <div class="m-tree">
+            <ul id="treeDemo" class="ztree">
+            </ul>
+          </div>
+          <div class="m-treeR">
+            <div class="m-form f-cb">
+              <dl class="f-cb">
+                <dt>类型：</dt>
+                <dd>
+                  <label>
+                    <input type="radio" />
+                    单选</label>
+                  <label>
+                    <input type="radio" />
+                    多选</label>
+                  <label>
+                    <input type="checkbox" />
+                    复选框</label>
+                </dd>
+                <dt>选择模版：</dt>
+                <dd>
+                  <input name="" type="text" class="u-iptl" />
+                  <input name="" type="button" class="u-btn marl10" value="上传" />
+                  <p>文件名字XXXXXXXXX.doc</p>
+                  <p class="z-err">上传出错</p>
+                </dd>
+                <dt>学科：</dt>
+                <dd>
+                  <select class="u-slts">
+                    <option>全部</option>
+                  </select>
+                </dd>
+                <dt>学科：</dt>
+                <dd>
+                  <select class="u-sltm">
+                    <option>全部</option>
+                  </select>
+                </dd>
+                <dt>学科：</dt>
+                <dd>
+                  <select class="u-sltl">
+                    <option>全部</option>
+                  </select>
+                </dd>
+                <dt>选项1：</dt>
+                <dd>
+                  <input name="" type="text" class="u-ipts" />
+                </dd>
+                <dt>选项2：</dt>
+                <dd>
+                  <input name="" type="text" class="u-iptm" />
+                </dd>
+                <dt>选项2：</dt>
+                <dd>
+                  <input name="" type="text" class="u-iptl" />
+                  <label class="f-fs12">
+                    <input type="checkbox" />
+                    同步修改文件名</label>
+                </dd>
+                <dt>标识码：</dt>
+                <dd>MT201309061234</dd>
+                <dt>题目：</dt>
+                <dd>
+                  <textarea class="u-taas"></textarea>
+                  <p class="z-err">填写错误</p>
+                </dd>
+                <dt>题目：</dt>
+                <dd>
+                  <textarea class="u-taal"></textarea>
+                  <p class="z-err">填写错误</p>
+                </dd>
+                <dt></dt>
+                <dd>
+                  <input type="button" class="u-btnblue" value="保存">
+                  <input type="button" class="u-btnblue marl10" value="取消" />
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <!-- /树状 --> 
+        <!-- 弹层 -->
+        <div class="m-popup f-cb">
+          <div class="popuptitle"><span class="txt">平台新闻发布</span><a class="ico-close"></a></div>
+          <div class="popupcon">
+            <dl>
+              <dt>请选择省</dt>
+              <dd><a class="z-crt">山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a><a>山东省</a></dd>
+            </dl>
+          </div>
+          <!--试卷预览弹窗-->
+          <div class="m-down f-cb">
+          <div class="m-pb f-cb">
+            <dl>
+              <dt>Word版本</dt>
+              <dd>
+                
+                  <input name="" type="radio" value=""  />
+                  Word 2007/2010，文件扩展名为docx 
+                
+                  <input name="" type="radio" value="" />
+                  Word 2000/2003，文件扩展名为doc
+              </dd>
+            </dl>
+            </div>
+            <div class="m-pb f-cb">
+            <dl>
+              <dt>纸张大小</dt>
+              <dd>
+                <table>
+                  <tr class="m-tbbg">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><label><input name="" type="radio" value="" /></label></td>
+                    <td><label><input name="" type="radio" value="" /></label></td>
+                    <td><label><input name="" type="radio" value="" /></label></td>
+                    <td><label><input name="" type="radio" value="" /></label></td>
+                    <td><label><input name="" type="radio" value="" /></label></td>
+                    <td><label><input name="" type="radio" value="" /></label></td>
+                  </tr>
+                  <tr>
+                    <td>A4</td>
+                    <td>A4横(双栏)</td>
+                    <td>A3</td>
+                    <td>16K</td>
+                    <td>8K横(双栏)</td>
+                    <td>A3横(双栏)</td>
+                  </tr>
+                </table>
+              </dd>
+            </dl>
+            </div>
+            <div class="m-pb f-cb">
+            <dl>
+              <dt>试卷类型 </dt>
+              <dd>
+                <input name="" type="radio" value="" />
+                普通用卷（答案集中在卷尾）
+                <input name="" type="radio" value=""  />
+                教师用卷（每题后面跟答案）
+                <input name="" type="radio" value=""  />
+                学生用卷（无答案）</span>
+                <input name="" type="radio" value="" />
+                解析答案（无题目）
+                 </dd>
+            </dl>
+            </div>
+            <div class="f-cb m-tips m-pb">温馨提示：下载后的试卷不会带有任何水印，建议您使用微软Word软件打开文档。</div>
+          </div>
+          <div class="m-downbtn f-cb">
+          <div class="m-fr">
+            <input name="" type="button" value="确定" class="u-btnblue" />
+            <input name="" type="button" value="取消" class="u-btnblue"/></div>
+          </div>
+          <!--/试卷预览弹窗--> 
+        </div>
+        <!-- /弹层 --> 
+        <!-- 操作成功 -->
+        <div class="m-opersf f-cb">
+          <dl>
+            <dt class="ico-succeed f-cb"></dt>
+            <dd>
+              <h1 class="z-testrgt">操作成功！</h1>
+              <p>将在<em class="z-testrgt">25</em>秒后自动跳转，若不想等待，请<a>点击此处</a>跳转</p>
+            </dd>
+          </dl>
+        </div>
+        <!-- /操作成功 --> 
+        <!-- 操作失败 -->
+        <div class="m-opersf f-cb">
+          <dl>
+            <dt class="ico-fail"></dt>
+            <dd>
+              <h1 class="z-err">操作失败！</h1>
+              <p>将在<em class="z-err">25</em>秒后自动跳转，若不想等待，请<a>点击此处</a>跳转</p>
+              <p><i class="z-err">错误原因：404</i></p>
+            </dd>
+          </dl>
+        </div>
+        <!-- /操作失败 --> 
+        <!-- 问题监控 -->
+        <div class="m-mntrnbox f-cb">
+          <h2><span class="f-fl"><i class="ico-help"></i>从兴趣、爱好、特长、性格、理想方面对自己进行详细的自我设计</span><span class="f-fr"><em>发布人：张三</em><em>时间：2013-12-16</em></span></h2>
+          <p>自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己</p>
+          <p class="mart10"><i class="u-icoadd">追加</i>自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己自我介绍是向别人介绍自己</p>
+          <p class="f-tar"><a class="shield">屏蔽</a><a class="shield">取消屏蔽</a></p>
+          <div class="content f-cb">
+            <div class="m-list">
+              <dl class="f-cb">
+                <dt>1条回答</dt>
+                <dd><span class="f-fl">阅读书籍 音乐欣赏 手机邮票 乐器 美术 种植花木</span><span class="f-fr"><em>发布人：张三</em><em>时间：2013-12-16</em><a class="shield marl20">屏蔽</a><a class="shield">取消屏蔽</a></span></dd>
+              </dl>
+              <dl class="f-cb">
+                <dt>1条回答</dt>
+                <dd><span class="f-fl">阅读书籍 音乐欣赏 手机邮票 乐器 美术 种植花木</span><span class="f-fr"><em>发布人：张三</em><em>时间：2013-12-16</em><a class="shield marl20">屏蔽</a><a class="shield">取消屏蔽</a></span></dd>
+              </dl>
+              <dl class="f-cb">
+                <dt>1条回答</dt>
+                <dd><span class="f-fl">阅读书籍 音乐欣赏 手机邮票 乐器 美术 种植花木</span><span class="f-fr"><em>发布人：张三</em><em>时间：2013-12-16</em><a class="shield marl20">屏蔽</a><a class="shield">取消屏蔽</a></span></dd>
+              </dl>
+              <dl class="f-cb last">
+                <dt>1条回答</dt>
+                <dd><span class="f-fl">阅读书籍 音乐欣赏 手机邮票 乐器 美术 种植花木</span><span class="f-fr"><em>发布人：张三</em><em>时间：2013-12-16</em><a class="shield marl20">屏蔽</a><a class="shield">取消屏蔽</a></span></dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <!-- /问题监控 --> 
+        <!-- 问卷调查 -->
+        <div class="m-qetonie f-cb">
+        <h1>个人信息问卷调查</h1>
+            <dl class="m-test">
+                <dt>1、您的学历是？（单选）</dt>
+                <dd class="f-cb"><label><input name="" type="radio" value="" />高中</label></dd>
+                <dd class="f-cb"><label><input name="" type="radio" value="" />大专</label></dd>
+                <dd class="f-cb"><label><input name="" type="radio" value="" />本科</label></dd>
+                <dd class="f-cb"><label><input name="" type="radio" value="" />本科</label></dd>
+                <dd class="last-child f-tar"><a class="f-oper"><i class="ico-edit"></i>编辑</a><a class="f-oper"><i class="ico-del"></i>删除</a></dd>
+            </dl>
+            <div class="m-content f-cb">
+              <dl class="m-test f-width50p f-fl">
+                  <dt>1、您的学历是？（单选）</dt>
+                  <dd class="f-cb"><label><input name="" type="radio" value="" />高中</label></dd>
+                  <dd class="f-cb"><label><input name="" type="radio" value="" />大专</label></dd>
+                  <dd class="f-cb"><label><input name="" type="radio" value="" />本科</label></dd>
+                  <dd class="f-cb"><label><input name="" type="radio" value="" />本科</label></dd>
+                  <dd class="last-child f-tar"><a class="f-oper"><i class="ico-edit"></i>编辑</a><a class="f-oper"><i class="ico-del"></i>删除</a></dd>
+              </dl>
+              <div class="f-fl">
+              	此处为饼状图
+              </div>
+            </div>
+            <dl class="m-test">
+                <dt>2、您的学历是？（多选）</dt>
+                <dd class="f-cb"><label><input name="" type="checkbox" value="" />高中</label></dd>
+                <dd class="f-cb"><label><input name="" type="checkbox" value="" />大专</label></dd>
+                <dd class="f-cb"><label><input name="" type="checkbox" value="" />本科</label></dd>
+                <dd class="f-cb"><label><input name="" type="checkbox" value="" />本科</label></dd>
+                <dd class="last-child f-tar"><a class="f-oper"><i class="ico-edit"></i>编辑</a><a class="f-oper"><i class="ico-del"></i>删除</a></dd>
+            </dl>
+            <dl class="m-test">
+                <dt>3、您的学历是？（主观）</dt>
+                <dd class="f-cb last-child"><textarea name="" cols="" rows="" class="u-taal"></textarea></dd>
+                <dd class="last-child f-tar"><a class="f-oper"><i class="ico-edit"></i>编辑</a><a class="f-oper"><i class="ico-del"></i>删除</a></dd>
+            </dl>            
+              <dl class="f-tac">
+                <input type="button" class="u-btnblue" value="保存">
+                <input type="button" class="u-btnblue marl10" value="取消" />
+              </dl>
+        </div>
+        <!-- /问卷调查 --> 
+        <!--试卷部分-->
+        <div class="m-st"> 
+          <!--试题类型-->
+          <div class="m-qty f-cb">
+            <ul>
+              <li><a class="z-crt">全部类型</a></li>
+              <li><a >单选题</a></li>
+              <li><a >填空题</a></li>
+              <li><a >计算题</a></li>
+              <li><a >解答题</a></li>
+              <li><a >判断题</a></li>
+            </ul>
+          </div>
+          <div class="m-qty f-cb ">
+            <ul>
+              <li><a class="z-crt">全部难度</a></li>
+              <li><a >容易</a></li>
+              <li><a >较易</a></li>
+              <li><a >一般</a></li>
+              <li><a >较难</a></li>
+              <li><a >困难</a></li>
+            </ul>
+          </div>
+          <!--/试题类型--> 
+          <!--题目数量统计-->
+          <div> 共计<span class="m-bold">71464</span>题（提示：点击题目内容即可查看到答案和解析内容，下载后的试卷将不会带有任何水印)</div>
+          <!--/题目数量统计--> 
+          <!--试卷试题-->
+          <div class="m-sjst f-cb"> 
+            <!--试题标题-->
+            <div class="m-fl"> 
+              <!--试卷标题详情-->
+              <dl class="m-fl">
+                <dt>2013年初中毕业升学考试（云南昆明卷）数学（带解析）</dt>
+                <dd class="m-xq">
+                  <div class="m-fl"><span class="m-sj">174</span>人使用过</div>
+                  <div class="m-fl">编号：1341979</div>
+                  <div class="m-fl">知识点：图形的相似</div>
+                  <div class="m-fl">难易度：<span class="m-nyd m-type1">（较易）</span></div>
+                  <div class="m-fl">更新日期：2013-09-28</div>
+                </dd>
+              </dl>
+              <!--试卷标题详情--> 
+            </div>
+            <!--/试题标题--> 
+            <!--加入和移出试卷按钮-->
+            <div class="m-fr">
+              <input class="u-btnblue u-height" type="button" value="将本页题目全部加入试卷">
+              </input>
+              <input class="u-btnblue u-height" type="button" value="加入试卷">
+              </input>
+            </div>
+            <!--/加入和移出试卷按钮--> 
+            <!--试卷试题部分-->
+            <div class="m-qc">
+              <div><img src="../../Style/Images/question.jpg" width="658" height="115" /></div>
+              <div><img src="../../Style/Images/answer.jpg" width="658" height="324" /></div>
+            </div>
+            <!--/试卷试题部分--> 
+          </div>
+          <!--/试卷试题--> 
+        </div>
+        <!--/试卷部分--> 
+        <!--搜索选题-->
+        <div class="m-st"> 
+          <!--搜索结果-->
+          <div>搜索“<span class="m-sj">数学</span>”的结果共<span class="m-bold m-sr">7125</span>题</div>
+          <!--/搜索结果--> 
+          <!--搜索出的试题-->
+          <div class="m-sjst f-cb"> 
+            <!--试题标题-->
+            <div class="m-fl f-cb">
+              <dl class="m-fl">
+                <dt>2011-2012学年江苏苏州立达中学七年级（下）期末数学试题（带解析）</dt>
+                <dd class="m-xq">
+                  <div class="m-fl"><span class="m-sj">21</span>人使用过</div>
+                  <div class="m-fl">编号：742885</div>
+                  <div class="m-fl">知识点：图形的相似</div>
+                  <div class="m-fl">难易度：<span class="m-nyd m-type1">（较易）</span></div>
+                  <div class="m-fl">更新日期：2012-09-26</div>
+                </dd>
+              </dl>
+            </div>
+            <!--/试题标题--> 
+            <!--加入和移出试卷按钮-->
+            <div class="m-fr">
+              <input class="u-btnblue" type="button" value="将本页题目全部加入试卷">
+              </input>
+              <input class="u-btnblue" type="button" value="加入试卷">
+              </input>
+              <input class="u-btn" type="button" value="移出试卷" name="">
+              </input>
+            </div>
+            <!--/加入和移出试卷按钮--> 
+            <!--试卷试题部分-->
+            <div class="m-qc">
+              <div><img src="../../Style/Images/question-1.jpg" width="658" height="55" /></div>
+              <div><img src="../../Style/Images/answer-1.jpg" width="658" height="63" /></div>
+            </div>
+            <!--/试卷试题部分--> 
+          </div>
+          <div class="m-sjst f-cb"> 
+            <!--试题标题-->   
+            <div class="m-fl f-cb">         
+            <dl class="m-fl">
+              <dt>2011-2012学年江苏苏州立达中学七年级（下）期末数学试题（带解析）</dt>
+              <dd class="m-xq">
+                <div class="m-fl"><span class="m-sj">21</span>人使用过</div>
+                <div class="m-fl">编号：742885</div>
+                <div class="m-fl">知识点：图形的相似</div>
+                <div class="m-fl">难易度：<span class="m-nyd m-type1">（较易）</span></div>
+                <div class="m-fl">更新日期：2012-09-26</div>
+              </dd>
+            </dl>
+            </div>
+            <!--/试题标题--> 
+            <!--加入和移出试卷按钮-->
+            <div class="m-fr">
+              <input class="u-btn" type="button" value="移出试卷" name="">
+              </input>
+            </div>
+            <!--/加入和移出试卷按钮--> 
+            <!--试卷试题部分-->
+            <div class="m-qc">
+              <p><img src="../../Style/Images/question-1.jpg" width="658" height="55" /></p>
+              <p><img src="../../Style/Images/answer-1.jpg" width="658" height="63" /></p>
+            </div>
+            <!--/试卷试题部分--> 
+          </div>
+          <!--/搜索出的试题--> 
+        </div>
+        <!--/搜索选题--> 
+        <!--智能选题-->
+        <div class="m-st" >
+          <dl class="m-intell">
+            <dt>
+              <label>
+                <input type="checkbox" value="" name="">
+                1、数与式</label>
+            </dt>
+            <dd class="m-intp">
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" value="" name="">
+                    1.1有理数</label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="" name="">
+                    1.2整数</label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="" name="">
+                    1.3分式</label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="" name="">
+                    1.4二次根式</label>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <!--/智能选题--> 
+        
+        <!--试卷预览-->
+        <div class="m-content f-cb"> 
+          <!--试卷左侧栏-->
+          <div class="s-borderbg m-yl"> 
+            <!--试卷类型选择及设置-->
+            <div>
+              <select class="u-sltm">
+                <option value="">默认结构</option>
+                <option value="">标准结构</option>
+                <option value="">测验结构</option>
+                <option value="">作业结构</option>
+              </select>
+              <a>重置</a> <a>设置</a> </div>
+            <!--/试卷类型选择及设置-->
+            
+            <div class="m-jt"> 
+              <!--卷头-->
+              <ul>
+                <li class="m-jtbt">卷头</li>
+                <li class="f-cb"> <a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>主标题</span> </li>
+                <li class="f-cb"> <a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>副标题</span> </li>
+                <li class="f-cb"> <a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>试卷信息栏</span> </li>
+                <li class="f-cb"> <a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>誊分栏</span> </li>
+                <li class="f-cb"> <a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>注意事项栏</span> </li>
+              </ul>
+              <!--/卷头--> 
+              <!--卷体-->
+              <ul>
+                <li class="m-jtbt">卷体</li>
+                <li class="f-cb">
+                  <div> <a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>第I卷（选择题）</span> </div>
+                  <ul class="m-menut">
+                    <li>
+                      <div class="m-dp"><a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>一、单选题</span></div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="f-cb">
+                  <div class="m-dpt"> <a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>第II卷（非选择题）</span> </div>
+                  <ul class="m-menut">
+                    <li>
+                      <div class="m-dp"><a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>二、填空题</span></div>
+                      <div class="m-dp"><a class="u-btn1"></a> <a class="u-btn2"></a> <a class="u-btn3"></a> <span>三、计算题</span></div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <!--/卷体--> 
+            </div>
+          </div>
+          <!--/试卷左侧栏--> 
+          <!--右侧试卷内容-->
+          <div class="m-yr">
+          	<div class="m-yrcontent f-cb">
+            <div class="m-yrtop">
+              <div class="m-yrt" >
+                <input name="" type="button" value="下载试卷" class="u-btn4"  />
+                <input name="" type="button" value="试卷存档" class="u-btn5"  />
+              </div>
+            </div>
+            <!--试卷内容-->
+            <div class="m-content">
+              <!--试卷标题及核分-->
+              <div class="m-sttitle">2013-2014学年度xx学校xx月考卷</div>
+              <div class="m-sttitle">试卷副标题</div>
+              <div class="m-stg">考试范围：xxx；考试时间：100分钟；命题人：xxx</div>
+              <div class="m-stg">学校：___________姓名：___________班级：___________考号：___________</div>
+              <div class="m-centerbox" >
+                <table>
+                  <tr>
+                    <td>题号</td>
+                    <td>一</td>
+                    <td>二</td>
+                    <td>三</td>
+                    <td>四</td>
+                    <td>五</td>
+                    <td>六</td>
+                    <td>七</td>
+                    <td>八</td>
+                    <td>九</td>
+                    <td>总分</td>
+                  </tr>
+                  <tr>
+                    <td>得分</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+              <!--试卷标题及核分--> 
+              <!--注意事项-->
+              <div class="m-ation">
+                <dl>
+                  <dt>注意事项：</dt>
+                  <dd> 1. 答题前填写好自己的姓名、班级、考号等信息 <br>
+                    2. 请将答案正确填写在答题卡上 </dd>
+                </dl>
+              </div>
+              <!--/注意事项--> 
+              <!--试卷预览右边试题部分-->
+              <div class="m-fj1"> <div>分卷I 注释</div>                
+              <!--按钮-->
+                <div class="m-abtn">
+                  <input class="u-btn" type="button" value="清空" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="删除" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="设置" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="上移" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="下移" name="">
+                  </input>
+                </div>
+                <!--/按钮--> 
+</div>
+              <div class="m-fjt"> 
+                <!--得分表格-->
+                <div class="m-fjttb">
+                  <table >
+                    <tr>
+                      <th>评卷人</th>
+                      <th>得 分</th>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </table>
+                </div>
+                <!--/得分表格--> 
+                <!--标题-->
+                <div class="m-fjtbt">一、单选题（注释）</div>
+                <!--/标题--> 
+                <!--按钮-->
+                <div class="m-abtn">
+                  <input class="u-btn" type="button" value="清空" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="删除" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="设置" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="上移" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="下移" name="">
+                  </input>
+                </div>
+                <!--/按钮--> 
+              </div>
+              <!--试卷正文-->
+              <div class="m-sjz f-cb">
+                <div class="m-qc">
+                  <p><img src="../../Style/Images/question2.png" /></p>
+                  <p><img src="../../Style/Images/answer2.png" /></p>
+                </div>
+                <!--按钮-->
+                <div class="m-abtn">
+                  <input class="u-btn" type="button" value="删除" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="设置" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="上移" name="">
+                  </input>
+                  <input class="u-btn" type="button" value="下移" name="">
+                  </input>
+                </div>
+                <!--/按钮--> 
+              </div>
+              <!--/试卷正文--> 
+              <!--/试卷预览右边试题部分--> 
+              </div>
+            <!--/试卷内容--> 
+          </div>
+          </div>
+          <!--/右侧试卷内容--> 
+        </div>
+        <!--/试卷预览--> 
+        <!--table04--> 
+        <div class="m-content f-cb">
+          <table class="m-table04" border="0">
+            <tr>
+              <th>已选试题</th>
+              <th>单选题</th>
+              <th>多选题</th>
+              <th>填空题</th>
+              <th>计算题</th>
+              <th>解答题</th>
+              <th>判断题</th>
+              <th>合计</th>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td>23</td>
+              <td>23</td>
+              <td>23</td>
+              <td>23</td>
+              <td>23</td>
+              <td>23</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><a><i class="ico-clear"></i></a></td>
+              <td><a><i class="ico-clear"></i></a></td>
+              <td><a><i class="ico-clear"></i></a></td>
+              <td><a><i class="ico-clear"></i></a></td>
+              <td><a><i class="ico-clear"></i></a></td>
+              <td><a><i class="ico-clear"></i></a></td>
+              <td><a><i class="ico-clear"></i></a></td>
+              <td><a><i class="ico-clear"></i></a></td>
+            </tr>
+          </table>
+        </div>
+        <!--/table04--> 
+        <!--table05--> 
+        <div class="m-content f-cb">
+        <table class="m-table05" border="0">
+            <tr>
+              <th rowspan="4">题型一头部</th>
+              <td>
+                  <label>
+                    <input type="radio" />
+                    单选</label>
+                  <label>
+                    <input type="radio" />
+                    多选</label>
+                  <label>
+                    <input type="checkbox" />
+                    复选框</label></td>
+             </tr>
+            <tr>
+              <td>
+                  <label>
+                    <input type="checkbox" value="" name="">
+                    1.1有理数</label></td>
+             </tr>
+            <tr>
+              <td>
+                  <label>
+                    <input type="checkbox" value="" name="">
+                    1.1有理数</label></td>
+             </tr>
+            <tr>
+              <td><p>文本</p>
+                  <textarea class="u-taal"></textarea>
+              </td>
+             </tr>
+      </table>
+        <table class="m-table05 z-crt" border="0">
+            <tr>
+              <th rowspan="4">题型一头部</th>
+              <td>
+                  <label>
+                    <input type="radio" />
+                    单选</label>
+                  <label>
+                    <input type="radio" />
+                    多选</label>
+                  <label>
+                    <input type="checkbox" />
+                    复选框</label></td>
+             </tr>
+            <tr>
+              <td>
+                  <label>
+                    <input type="checkbox" value="" name="">
+                    1.1有理数</label></td>
+             </tr>
+            <tr>
+              <td>
+                  <label>
+                    <input type="checkbox" value="" name="">
+                    1.1有理数</label></td>
+             </tr>
+            <tr>
+              <td><p>文本</p>
+                  <textarea class="u-taal"></textarea>
+                  </td>
+             </tr>
+      </table>
+        </div>
+        <!--/table05--> 
+
+      </div>
+    </div>
+    <!-- /主体内容 --> 
+  </div>
+</div>
+<!-- /主体 --> 
+<!-- 尾部 -->
+<div class="g-ft">
+  <div class="m-ft">
+    <p>版权所有 © 2013山东出版传媒股份有限公司</p>
+    <p>全国客服热线：400-088-1616 鲁ICP备09073757号</p>
+  </div>
+</div>
+<!-- /尾部 --> 
+<SCRIPT type="text/javascript">
+		<!--
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"父节点1 - 展开", open:true},
+			{ id:11, pId:1, name:"父节点11 - 折叠"},
+			{ id:111, pId:11, name:"叶子节点111"},
+			{ id:112, pId:11, name:"叶子节点112"},
+			{ id:113, pId:11, name:"叶子节点113"},
+			{ id:114, pId:11, name:"叶子节点114"},
+			{ id:12, pId:1, name:"父节点12 - 折叠"},
+			{ id:121, pId:12, name:"叶子节点121"},
+			{ id:122, pId:12, name:"叶子节点122"},
+			{ id:123, pId:12, name:"叶子节点123"},
+			{ id:124, pId:12, name:"叶子节点124"},
+			{ id:13, pId:1, name:"父节点13 - 没有子节点", isParent:true},
+			{ id:2, pId:0, name:"父节点2 - 折叠"},
+			{ id:21, pId:2, name:"父节点21 - 展开", open:true},
+			{ id:211, pId:21, name:"叶子节点211"},
+			{ id:212, pId:21, name:"叶子节点212"},
+			{ id:213, pId:21, name:"叶子节点213"},
+			{ id:214, pId:21, name:"叶子节点214"},
+			{ id:22, pId:2, name:"父节点22 - 折叠"},
+			{ id:221, pId:22, name:"叶子节点221"},
+			{ id:222, pId:22, name:"叶子节点222"},
+			{ id:223, pId:22, name:"叶子节点223"},
+			{ id:224, pId:22, name:"叶子节点224"},
+			{ id:23, pId:2, name:"父节点23 - 折叠"},
+			{ id:231, pId:23, name:"叶子节点231"},
+			{ id:232, pId:23, name:"叶子节点232"},
+			{ id:233, pId:23, name:"叶子节点233"},
+			{ id:234, pId:23, name:"叶子节点234"},
+			{ id:3, pId:0, name:"父节点3 - 没有子节点", isParent:true}
+		];
+
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+		});
+		//-->
+	</SCRIPT>
+</body>
+</html>

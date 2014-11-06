@@ -207,7 +207,7 @@ namespace ProjectManager.Models
 	}
 
     
-	[TableName("SYs_Organization")]
+	[TableName("Pro_Organization")]
 
 
 	[PrimaryKey("ID")]
@@ -251,7 +251,7 @@ namespace ProjectManager.Models
 	}
 
     
-	[TableName("Sys_ToDo")]
+	[TableName("Pro_ToDo")]
 
 
 	[PrimaryKey("ID", autoIncrement=false)]
@@ -305,7 +305,7 @@ namespace ProjectManager.Models
 	}
 
     
-	[TableName("Sys_ToDo_Group")]
+	[TableName("Pro_ToDo_Group")]
 
 
 	[ExplicitColumns]
@@ -451,7 +451,7 @@ namespace ProjectManager.Models
 	}
 
     
-	[TableName("Sys_User")]
+	[TableName("Pro_User")]
 
 
 	[PrimaryKey("ID")]
@@ -525,6 +525,190 @@ namespace ProjectManager.Models
 
 
 		[Column] public string Position { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_User_Role")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class UserRoleModel : defaultDB.Record<UserRoleModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column("User_ID")] public int UserID { get; set; }
+
+
+
+
+
+		[Column("Role_ID")] public int RoleID { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Role")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class RoleModel : defaultDB.Record<RoleModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column] public string Remark { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Node")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class NodeModel : defaultDB.Record<NodeModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column] public int Pid { get; set; }
+
+
+
+
+
+		[Column("Node_Level")] public int NodeLevel { get; set; }
+
+
+
+
+
+		[Column] public string Link { get; set; }
+
+
+
+
+
+		[Column("Group_ID")] public int GroupID { get; set; }
+
+
+
+
+
+		[Column] public int SortNo { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Sys_Group")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class GroupModel : defaultDB.Record<GroupModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column] public string Name { get; set; }
+
+
+
+
+
+		[Column] public int SortNo { get; set; }
+
+
+
+	}
+
+    
+	[TableName("Pro_Access")]
+
+
+	[PrimaryKey("ID")]
+
+
+
+	[ExplicitColumns]
+    public partial class AccessModel : defaultDB.Record<AccessModel>  
+    {
+
+
+
+		[Column] public int ID { get; set; }
+
+
+
+
+
+		[Column("Role_ID")] public int RoleID { get; set; }
+
+
+
+
+
+		[Column("Node_ID")] public int NodeID { get; set; }
 
 
 
