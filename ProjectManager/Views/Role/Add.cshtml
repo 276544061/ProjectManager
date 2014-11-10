@@ -1,0 +1,32 @@
+﻿@model RoleModel
+
+@{
+    ViewBag.Title = "添加角色";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts
+{
+    <script src="~/Content/App/Role/Add.js"></script>
+}
+@using (Ajax.BeginForm("add", "Role", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal" }))
+{
+    <div class="m-form f-cb">
+        <dl class="f-cb s-borderbg">
+            <dt><i>*</i>@Html.LabelFor(m => m.Name)</dt>
+            <dd>
+                @Html.TextBoxFor(m => m.Name, new { @class = "u-iptl" })
+                @Html.ValidationMessageFor(m=>m.Name)
+            </dd>
+            <dt>@Html.LabelFor(m => m.Remark)</dt>
+            <dd>
+                @Html.TextBoxFor(m => m.Remark, new { @class = "u-iptl" })
+                 @Html.ValidationMessageFor(m=>m.Remark)
+            </dd>
+            <dt></dt>
+            <dd>
+                <input type="submit" class="u-btnblue" value="保存">
+                <input type="button" class="u-btnblue marl10" value="取消">
+            </dd>
+        </dl>
+    </div>
+}

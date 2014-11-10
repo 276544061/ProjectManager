@@ -1,0 +1,53 @@
+﻿@model ProjectManager.Models.NodeModel
+
+@{
+    ViewBag.Title = "编辑节点";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts
+{
+    <script src="~/Content/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+    <link href="~/Content/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    <script src="~/Content/App/Node/Edit.js"></script>
+}
+<div class="m-tree">
+    <ul class="ztree" id="ztree">
+    </ul>
+</div>
+<div class="m-treeR">
+    @using (Ajax.BeginForm("Edit", "Node", null, new AjaxOptions { HttpMethod = "Post", OnSuccess = "App.SaveSuccess" }, new { @class = "form-horizontal",id="form1" }))
+    {
+        <div class="m-form f-cb">
+            <dl class="f-cb s-borderbg">
+                <dt><i>*</i>@Html.LabelFor(m => m.Name)</dt>
+                <dd>
+                    @Html.TextBoxFor(m => m.Name, new { @class = "u-iptl" })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </dd>
+                <dt><i>*</i>@Html.LabelFor(m => m.GroupID)</dt>
+                <dd>
+                    @Html.DropDownListFor(m => m.GroupID, null, new { @class = "u-sltl" })
+                    @Html.ValidationMessageFor(m => m.GroupID)
+                    @Html.HiddenFor(m => m.Pid)
+                    @Html.HiddenFor(m=>m.ID)
+                </dd>
+                <dt><i>*</i>@Html.LabelFor(m => m.Link)</dt>
+                <dd>
+                    @Html.TextBoxFor(m => m.Link, new { @class = "u-iptl" })
+                    @Html.ValidationMessageFor(m => m.Link)
+                </dd>
+                <dt><i>*</i>@Html.LabelFor(m => m.SortNo)</dt>
+                <dd>
+                    @Html.TextBoxFor(m => m.SortNo, new { @class = "u-iptl" })
+                    @Html.ValidationMessageFor(m => m.SortNo)
+                </dd>
+                <dt></dt>
+                <dd>
+                    <input type="submit" class="u-btnblue" value="保存">
+                    <input type="button" class="u-btnblue" value="删除节点" onclick="App.Delete()"/>
+                    <input type="button" class="u-btnblue marl10" value="取消">
+                </dd>
+            </dl>
+        </div>
+    }
+</div>

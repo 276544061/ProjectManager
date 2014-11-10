@@ -8,6 +8,7 @@ Common.Tips = function (result,callback) {
     var icon = result.Res ? 'succeed' : 'warning';
     $.dialog({ icon: icon, content: result.Msg, time: show_time, cancel: callback });
 }
+
 Common.Menu=function() {
     /* 一级导航 */
     var topMenu = $(".m-menu ul li");

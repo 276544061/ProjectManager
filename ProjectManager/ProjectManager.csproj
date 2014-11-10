@@ -113,6 +113,7 @@
     <Compile Include="Controllers\NodeController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\RequireController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -128,6 +129,7 @@
     <Compile Include="Models\Meta\AreaModelMeta.cs" />
     <Compile Include="Models\Meta\UserModelMeta.cs" />
     <Compile Include="Models\Meta\NodeModelMeta.cs" />
+    <Compile Include="Models\Meta\RoleModelMeta.cs" />
     <Compile Include="Models\PetaPoco.cs" />
     <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Models\ViewModel\ProjectIndexViewModel.cs" />
@@ -140,8 +142,11 @@
   <ItemGroup>
     <Content Include="Content\App\Common.js" />
     <Content Include="Content\App\Module\SimpleAdd.js" />
+    <Content Include="Content\App\Node\Edit.js" />
     <Content Include="Content\App\Require\Add.js" />
     <Content Include="Content\App\Area\Add.js" />
+    <Content Include="Content\App\Role\Index.js" />
+    <Content Include="Content\App\Role\Add.js" />
     <Content Include="Content\App\User\Add.js" />
     <Content Include="Content\App\Node\Add.js" />
     <Content Include="Content\artDialog\artDialog.js" />
@@ -1578,6 +1583,10 @@
     <Content Include="Content\后台公共样式\JScript\zTree\demo\cn\asyncData\getNodesForBigData.php" />
     <Content Include="Content\后台公共样式\JScript\zTree\demo\en\asyncData\getNodes.php" />
     <Content Include="Content\后台公共样式\JScript\zTree\demo\en\asyncData\getNodesForBigData.php" />
+    <Content Include="Views\Node\Edit.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Role\Add.cshtml" />
+    <Content Include="Views\Role\Access.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

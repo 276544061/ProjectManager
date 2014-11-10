@@ -1,0 +1,27 @@
+﻿@model PetaPoco.Page<RoleModel>
+
+@{
+    ViewBag.Title = "角色列表";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="m-content">
+    <div class="con">
+        <table class="m-table f-cb mart20">
+            <tr>
+                <th>@Html.LabelFor(m => m.Item.ID)</th>
+                <th>@Html.LabelFor(m => m.Item.Name)</th>
+                <th>操作</th>
+            </tr>
+            @foreach (RoleModel item in Model.Items)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                    <td>@Html.ActionLink("编辑", "edit", "role", new { id = item.ID }, new { @class = "f-oper" })
+                        @Ajax.ActionLink("删除", "delete", "role", new { id = item.ID },new AjaxOptions(){HttpMethod = "post",OnSuccess = "App.Delete"}, new { @class = "f-oper" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

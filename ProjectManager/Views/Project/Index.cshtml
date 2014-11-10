@@ -7,27 +7,27 @@
 
 <div class="m-content">
     <div class="con">
-    <table class="m-table f-cb mart20">
-        <tr>
-            <th>@Html.LabelFor(m => m.ProjectList.Item.ID)</th>
-            <th>@Html.LabelFor(m => m.ProjectList.Item.Name)</th>
-            <th>@Html.LabelFor(m => m.ProjectList.Item.Roles)</th>
-            <th>操作</th>
-        </tr>
-        @foreach (ProjectModel item in Model.ProjectList.Items)
-        {
+        <table class="m-table f-cb mart20">
             <tr>
-                <td>@item.ID</td>
-                <td>@item.Name</td>
-                <td>@item.Roles</td>
-                <td>@Ajax.ActionLink("使用", "Change", "project", new { id = item.ID }, new AjaxOptions { HttpMethod = "post", OnSuccess = "Common.Tips" }, new { @class = "f-oper" })
-                    @Html.ActionLink("查看需求", "Index", "Require", new { id = item.ID }, new { @class = "f-oper" })
-                    @Html.ActionLink("添加需求", "add", "Require", new { id = item.ID }, new { @class = "f-oper" })
-                    @Html.ActionLink("编辑", "edit", "project", new { id = item.ID }, new { @class = "f-oper" })
-                    @Html.ActionLink("删除", "delete", "project", new { id = item.ID }, new { @class = "f-oper" })
-                </td>
+                <th>@Html.LabelFor(m => m.ProjectList.Item.ID)</th>
+                <th>@Html.LabelFor(m => m.ProjectList.Item.Name)</th>
+                <th>@Html.LabelFor(m => m.ProjectList.Item.Roles)</th>
+                <th>操作</th>
             </tr>
-        }
-    </table>
-</div>
+            @foreach (ProjectModel item in Model.ProjectList.Items)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Name</td>
+                    <td>@item.Roles</td>
+                    <td>@Ajax.ActionLink("使用", "Change", "project", new { id = item.ID }, new AjaxOptions { HttpMethod = "post", OnSuccess = "Common.Tips" }, new { @class = "f-oper" })
+                        @Html.ActionLink("查看需求", "Index", "Require", new { id = item.ID }, new { @class = "f-oper" })
+                        @Html.ActionLink("添加需求", "add", "Require", new { id = item.ID }, new { @class = "f-oper" })
+                        @Html.ActionLink("编辑", "edit", "project", new { id = item.ID }, new { @class = "f-oper" })
+                        @Html.ActionLink("删除", "delete", "project", new { id = item.ID }, new { @class = "f-oper" })
+                    </td>
+                </tr>
+            }
+        </table>
     </div>
+</div>
