@@ -4,10 +4,14 @@
     ViewBag.Title = "添加节点";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section header
+{
+    <link href="~/Content/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+}
 @section scripts
 {
     <script src="~/Content/zTree/js/jquery.ztree.core-3.5.min.js"></script>
-    <link href="~/Content/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+    
     <script src="~/Content/App/Node/Add.js"></script>
 }
 <div class="m-tree">

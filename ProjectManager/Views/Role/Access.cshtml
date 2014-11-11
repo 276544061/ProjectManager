@@ -4,3 +4,28 @@
     ViewBag.Title = "设置权限";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@section header
+{
+    <link href="~/Content/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" />
+}
+@section scripts
+{
+    <script src="~/Content/zTree/js/jquery.ztree.core-3.5.min.js"></script>
+    <script src="~/Content/zTree/js/jquery.ztree.excheck-3.5.min.js"></script>
+    <script src="~/Content/App/Role/Access.js"></script>
+}
+<div class="m-form f-cb">
+    <dl class="f-cb s-borderbg">
+        <dt></dt>
+        <dd>
+            <ul class="ztree" id="ztree">
+            </ul>
+            @Html.HiddenFor(m => m.ID)
+        </dd>
+        <dt></dt>
+        <dd>
+            <input type="submit" class="u-btnblue" value="保存" onclick="App.Save()">
+            <input type="button" class="u-btnblue marl10" value="取消">
+        </dd>
+    </dl>
+</div>

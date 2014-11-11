@@ -103,6 +103,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Common\MyStatus.cs" />
+    <Compile Include="Common\ObjectExtend.cs" />
     <Compile Include="Common\StringExtender.cs" />
     <Compile Include="Content\umeditor\net\Uploader.cs" />
     <Compile Include="Controllers\AreaController.cs" />
@@ -147,6 +148,7 @@
     <Content Include="Content\App\Area\Add.js" />
     <Content Include="Content\App\Role\Index.js" />
     <Content Include="Content\App\Role\Add.js" />
+    <Content Include="Content\App\Role\Access.js" />
     <Content Include="Content\App\User\Add.js" />
     <Content Include="Content\App\Node\Add.js" />
     <Content Include="Content\artDialog\artDialog.js" />

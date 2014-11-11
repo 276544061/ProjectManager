@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PetaPoco;
+using ProjectManager.Common;
 using ProjectManager.Models;
 
 namespace ProjectManager.Controllers
@@ -106,11 +107,52 @@ namespace ProjectManager.Controllers
             RoleModel roleModel = RoleModel.SingleOrDefault(id);
             return View(roleModel);
         }
-
+        /// <summary>
+        /// 读取角色权限节点
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult GetAccess(int id)
         {
             List<AccessModel> accessList = AccessModel.Fetch("where Role_ID=@0", id);
-            return Json(accessList);
+            return Json(accessList,JsonRequestBehavior.AllowGet);
+        }
+
+        /// <summary>
+        /// 保存角色权限
+        /// </summary>
+        /// <param name="role_id"></param>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult SaveAccess(int role_id, string node)
+        {
+            ResultModel<AccessModel> result=new ResultModel<AccessModel>();
+            using (var tran = AccessModel.repo.GetTransaction())
+            {
+                try
+                {
+                    AccessModel.Delete("where role_id=@0", role_id);
+                    string[] node_id = node.Split(',');
+                    foreach (string item in node_id)
+                    {
+                        int n = item.ToInt();
+                        if (0 == n)
+                            continue;
+                        AccessModel model = new AccessModel();
+                        model.RoleID = role_id;
+                        model.NodeID = n;
+                        model.Insert();
+                    }
+                    tran.Complete();
+                }
+                catch (Exception ex)
+                {
+                    result.Res = false;
+                    result.Msg = ex.Message;
+                }
+            }
+            return Json(result);
         }
 
     }

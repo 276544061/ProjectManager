@@ -18,6 +18,7 @@
                     <td>@item.ID</td>
                     <td>@item.Name</td>
                     <td>@Html.ActionLink("编辑", "edit", "role", new { id = item.ID }, new { @class = "f-oper" })
+                        @Html.ActionLink("设置权限", "access", "role", new { id = item.ID }, new { @class = "f-oper" })
                         @Ajax.ActionLink("删除", "delete", "role", new { id = item.ID },new AjaxOptions(){HttpMethod = "post",OnSuccess = "App.Delete"}, new { @class = "f-oper" })
                     </td>
                 </tr>
